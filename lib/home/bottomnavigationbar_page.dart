@@ -3,7 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food/app/homepage/home_page.dart';
-import 'package:food/app/myaccount/my_account.dart';
+import 'package:food/myaccount/my_account.dart';
 import 'package:food/random/random_page.dart';
 
 class BarPage extends StatefulWidget {

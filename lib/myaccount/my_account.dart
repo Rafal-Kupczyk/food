@@ -2,7 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food/app/home/bottomnavigationbar_page.dart';
+import 'package:food/home/bottomnavigationbar_page.dart';
 
 class MyAccountPage extends StatelessWidget {
   const MyAccountPage({
