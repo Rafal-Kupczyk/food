@@ -3,7 +3,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:food/random/widgets/draw_text_widget.dart';
+import 'package:food/app/home/random/widgets/draw_text_widget.dart';
 
 class DrawPage extends StatelessWidget {
   const DrawPage({super.key});

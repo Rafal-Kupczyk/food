@@ -2,7 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food/random/draw_page.dart';
+import 'package:food/app/home/random/draw_page.dart';
 
 class RandomPage extends StatelessWidget {
   const RandomPage({

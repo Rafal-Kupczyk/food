@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:food/app/Login/login_page.dart';
-import 'package:food/home/bottomnavigationbar_page.dart';
+import 'package:food/app/home/bottomnavigationbar_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
