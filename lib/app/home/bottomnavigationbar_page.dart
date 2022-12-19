@@ -2,9 +2,12 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:food/app/homepage/home_page.dart';
+import 'package:food/app/myaccount/my_account.dart';
+import 'package:food/random/random_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({
+class BarPage extends StatefulWidget {
+  const BarPage({
     Key? key,
     required this.user,
   }) : super(key: key);
@@ -12,44 +15,23 @@ class HomePage extends StatefulWidget {
   final User user;
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<BarPage> createState() => _BarPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _BarPageState extends State<BarPage> {
   var currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return Scaffold(
-            body: Center(child: Text('1')),
-          );
+          return HomePage();
         }
         if (currentIndex == 1) {
-          return Scaffold(
-            body: Center(child: Text('2')),
-          );
+          return RandomPage();
         }
         if (currentIndex == 2) {}
-        return Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                  child: Text('Jestes zalogowany jako: ${widget.user.email} ')),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  FirebaseAuth.instance.signOut();
-                },
-                child: Text('Wyloguj sie'),
-              ),
-            ],
-          ),
-        );
+        return MyAccountPage(widget: widget);
       }),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
@@ -62,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Moje Konto',
+            label: 'Ekran glowny',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.refresh),
