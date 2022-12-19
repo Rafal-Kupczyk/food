@@ -1,7 +1,8 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, prefer_const_constructors
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:food/random/draw_page.dart';
 
 class RandomPage extends StatelessWidget {
   const RandomPage({
@@ -10,8 +11,33 @@ class RandomPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('2')),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Napewno cos dobrego :)'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Sprawdzmy co dzisiaj zjemy',
+              style: TextStyle(fontSize: 25),
+            ),
+            SizedBox(height: 40),
+            ElevatedButton(
+              child: Text('Sprawdz'),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => DrawPage(),
+                  ),
+                );
+              },
+            )
+          ],
+        ),
+      ),
     );
   }
 }
