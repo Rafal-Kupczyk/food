@@ -34,27 +34,43 @@ class _BarPageState extends State<BarPage> {
         return MyAccountPage(widget: widget);
       }),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color.fromARGB(255, 6, 255, 14),
+        selectedItemColor: Colors.red,
+
         currentIndex: currentIndex,
         onTap: (newIndex) {
           setState(() {
             currentIndex = newIndex;
+
+            Colors.red;
           });
         },
         // ignore: prefer_const_literals_to_create_immutables
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              size: currentIndex == 0 ? 30 : 20,
+            ),
             label: 'Ekran glowny',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.refresh),
+            icon: Icon(
+              Icons.refresh,
+              size: currentIndex == 1 ? 30 : 20,
+            ),
             label: 'Co dzis na obiad?',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              size: currentIndex == 2 ? 30 : 20,
+            ),
             label: 'Moje Konto',
           ),
         ],
+        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
+        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
       ),
     );
   }
