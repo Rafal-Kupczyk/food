@@ -19,7 +19,7 @@ class BarPage extends StatefulWidget {
 }
 
 class _BarPageState extends State<BarPage> {
-  var currentIndex = 0;
+  var currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
