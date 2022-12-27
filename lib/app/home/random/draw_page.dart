@@ -58,11 +58,16 @@ class DrawPage extends StatelessWidget {
             if (result == 8) SizedBox(height: 30),
             if (result == 8) Image.asset("images/kotletzpiersi.jpg"),
             SizedBox(height: 20),
-            ElevatedButton(
-              child: Text('Wróc'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
+            SizedBox(
+              width: 150,
+              height: 50,
+              child: ElevatedButton.icon(
+                icon: Icon(Icons.arrow_back),
+                label: Text('Wróc'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
             )
           ],
         ),

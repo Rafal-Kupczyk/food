@@ -34,8 +34,8 @@ class _BarPageState extends State<BarPage> {
         return MyAccountPage(widget: widget);
       }),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 6, 255, 14),
-        selectedItemColor: Colors.red,
+        backgroundColor: Color.fromARGB(255, 245, 157, 6),
+        selectedItemColor: Color.fromARGB(255, 248, 19, 3),
 
         currentIndex: currentIndex,
         onTap: (newIndex) {

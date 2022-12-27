@@ -25,15 +25,20 @@ class RandomPage extends StatelessWidget {
               style: TextStyle(fontSize: 25),
             ),
             SizedBox(height: 40),
-            ElevatedButton(
-              child: Text('Sprawdz'),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => DrawPage(),
-                  ),
-                );
-              },
+            SizedBox(
+              width: 250,
+              height: 50,
+              child: ElevatedButton.icon(
+                icon: Icon(Icons.verified),
+                label: Text('Sprawdz'),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => DrawPage(),
+                    ),
+                  );
+                },
+              ),
             )
           ],
         ),
