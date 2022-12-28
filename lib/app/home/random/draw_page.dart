@@ -3,6 +3,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:food/app/home/random/widgets/app_bar_color.dart';
 import 'package:food/app/home/random/widgets/draw_text_widget.dart';
 
 class DrawPage extends StatelessWidget {
@@ -25,6 +26,7 @@ class DrawPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Smacznego :)'),
         centerTitle: true,
+        flexibleSpace: AppBarColorPage(),
       ),
       body: Center(
         child: Column(

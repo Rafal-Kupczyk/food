@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:food/app/home/random/widgets/app_bar_color.dart';
 import 'package:food/main_screen/favorites_reustarants/favorites_reustarants_page.dart';
 import 'package:food/main_screen/ingredients/ingredients_page.dart';
 import 'package:food/main_screen/recipes_page.dart';
@@ -26,7 +27,9 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(':)'),
           centerTitle: true,
+          flexibleSpace: AppBarColorPage(),
         ),
+
         // ignore: prefer_const_literals_to_create_immutables
         body: Center(
           child: Column(
@@ -45,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                   child: ElevatedButton.icon(
                     icon: Icon(
                       Icons.flatware,
-                      color: Color.fromARGB(255, 239, 18, 2),
+                      color: Color.fromARGB(255, 27, 255, 7),
                     ),
                     onHover: (hovered) => setState(() {
                       isPressed = hovered;
@@ -89,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                   child: ElevatedButton.icon(
                     icon: Icon(
                       Icons.local_dining,
-                      color: Color.fromARGB(255, 239, 18, 2),
+                      color: Color.fromARGB(255, 252, 190, 4),
                     ),
                     onHover: (hovered) => setState(() {
                       isPressed = hovered;
@@ -141,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => FavoritesReustarantsPage(),
+                          builder: (_) => FavoritesPage(),
                         ),
                       );
                     },
@@ -177,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                   child: ElevatedButton.icon(
                     icon: Icon(
                       Icons.auto_stories,
-                      color: Color.fromARGB(255, 239, 18, 2),
+                      color: Color.fromARGB(255, 248, 248, 1),
                     ),
                     onHover: (hovered) => setState(() {
                       isPressed = hovered;

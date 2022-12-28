@@ -3,6 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:food/app/home/random/widgets/app_bar_color.dart';
 import 'package:food/firebase_options.dart';
 import 'package:food/main_screen/shopping_list/category_widget.dart';
 
@@ -40,7 +41,7 @@ class ShoppingListPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Lista zakupow'),
-        backgroundColor: Color.fromARGB(255, 44, 213, 255),
+        flexibleSpace: AppBarColorPage(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

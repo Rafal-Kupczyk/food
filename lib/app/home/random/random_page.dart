@@ -3,6 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food/app/home/random/draw_page.dart';
+import 'package:food/app/home/random/widgets/app_bar_color.dart';
 
 class RandomPage extends StatelessWidget {
   const RandomPage({
@@ -15,6 +16,7 @@ class RandomPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Napewno cos dobrego :)'),
         centerTitle: true,
+        flexibleSpace: AppBarColorPage(),
       ),
       body: Center(
         child: Column(
