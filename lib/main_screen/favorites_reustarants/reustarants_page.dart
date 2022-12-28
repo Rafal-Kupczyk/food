@@ -32,20 +32,33 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             for (final document in documents) ...[
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+              Dismissible(
+                key: ValueKey(document.id),
+                onDismissed: (_) {
+                  FirebaseFirestore.instance
+                      .collection('reustarants')
+                      .doc(document.id)
+                      .delete();
+                },
+                child: Container(
+                  color: Colors.amber,
+                  margin: EdgeInsets.all(5.0),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(document['name']),
-                        Text(document['adres']),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(document['name']),
+                            Text(document['adres']),
+                          ],
+                        ),
+                        Text(document['rating'].toString()),
                       ],
                     ),
-                    Text(document['rating'].toString()),
-                  ],
+                  ),
                 ),
               ),
             ],
