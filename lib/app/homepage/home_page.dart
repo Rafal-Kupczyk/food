@@ -5,7 +5,7 @@ import 'package:food/app/home/random/widgets/app_bar_color.dart';
 import 'package:food/main_screen/favorites_reustarants/favorites_reustarants_page.dart';
 import 'package:food/main_screen/ingredients/ingredients_page.dart';
 import 'package:food/main_screen/recipes_page.dart';
-import 'package:food/main_screen/shopping_list/shopping_list.dart';
+import 'package:food/main_screen/shopping_list/cubit/shopping_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                       );
                     },
                     label: Text(
-                      'Ulubione reustaracje',
+                      'Ulubione restauracje',
                       style: TextStyle(
                         color: Color.fromARGB(255, 255, 255, 255),
                         fontWeight: FontWeight.bold,

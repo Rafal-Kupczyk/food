@@ -16,7 +16,11 @@ class CategoryWidget extends StatelessWidget {
       color: Colors.amber,
       padding: EdgeInsets.all(30.0),
       margin: EdgeInsets.all(10.0),
-      child: Text(title),
+      child: Row(
+        children: [
+          Text(title),
+        ],
+      ),
     );
   }
 }
