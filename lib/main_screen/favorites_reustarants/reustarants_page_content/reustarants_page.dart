@@ -49,9 +49,29 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
                       ),
                     ),
                   ),
-                  confirmDismiss: (direction) async {
-                    return direction == DismissDirection.endToStart;
-                  },
+                  confirmDismiss: (direction) => showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text('Czy napewno chcesz usunąc?'),
+                        content: Text('Pózniej nie można tego cofnąć.'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(true);
+                            },
+                            child: Text('TAK'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(false);
+                            },
+                            child: Text('NIE'),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
                   onDismissed: (_) {
                     context
                         .read<ReustarantsPageCubit>()

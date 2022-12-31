@@ -44,6 +44,29 @@ class _FavoritesPageState extends State<FavoritesPage> {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: AppBarColorPage(),
+        actions: [
+          IconButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      content: Text(
+                          'Jeśli chcesz usunać pozycje, przeciągnij w którąs stronę.'),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Text('OK'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              icon: Icon(Icons.question_mark))
+        ],
       ),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {

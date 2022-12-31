@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 250,
+                width: 300,
                 height: 50,
                 child: Listener(
                   onPointerDown: (_) => setState(() {
@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 30),
               SizedBox(
-                width: 250,
+                width: 300,
                 height: 50,
                 child: Listener(
                   onPointerDown: (_) => setState(() {
@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 30),
               SizedBox(
-                width: 250,
+                width: 300,
                 height: 50,
                 child: Listener(
                   onPointerDown: (_) => setState(() {
@@ -168,7 +168,7 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 30),
               SizedBox(
-                width: 250,
+                width: 300,
                 height: 50,
                 child: Listener(
                   onPointerDown: (_) => setState(() {
