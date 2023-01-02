@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:food/main_screen/favorites_reustarants/favorites_reustarants_page.dart';
+import 'package:food/app/features/main_screen/favorites_reustarants/favorites_reustarants_page.dart';
 
 
 

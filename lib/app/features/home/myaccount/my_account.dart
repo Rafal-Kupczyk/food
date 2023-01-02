@@ -2,7 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
-import 'package:food/app/home/bottomnavigationbar_page.dart';
+import 'package:food/app/features/home/bottomnavigationbar_page.dart';
 
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 
