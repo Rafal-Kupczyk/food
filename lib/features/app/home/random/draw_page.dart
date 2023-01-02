@@ -3,8 +3,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:food/app/home/random/widgets/app_bar_color.dart';
-import 'package:food/app/home/random/widgets/draw_text_widget.dart';
+import 'package:food/features/app/home/random/widgets/app_bar_color.dart';
+import 'package:food/features/app/home/random/widgets/draw_text_widget.dart';
 
 class DrawPage extends StatelessWidget {
   const DrawPage({super.key});

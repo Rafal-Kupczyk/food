@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food/app/home/random/widgets/app_bar_color.dart';
+import 'package:food/features/app/home/random/widgets/app_bar_color.dart';
 import 'package:food/firebase_options.dart';
-import 'package:food/main_screen/shopping_list/category_widget.dart';
-import 'package:food/main_screen/shopping_list/cubit/cubit/cubit/shopping_list_cubit.dart';
+import 'package:food/features/main_screen/shopping_list/category_widget.dart';
+import 'package:food/features/main_screen/shopping_list/cubit/cubit/cubit/shopping_list_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding();

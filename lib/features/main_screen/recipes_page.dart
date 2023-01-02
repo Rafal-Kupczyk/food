@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:food/app/home/random/widgets/app_bar_color.dart';
-import 'package:food/main_screen/recipes/fast_food.dart';
-import 'package:food/main_screen/recipes/lunch_food.dart';
-import 'package:food/main_screen/recipes/salad_page.dart';
+import 'package:food/features/app/home/random/widgets/app_bar_color.dart';
+import 'package:food/features/main_screen/recipes/fast_food.dart';
+import 'package:food/features/main_screen/recipes/lunch_food.dart';
+import 'package:food/features/main_screen/recipes/salad_page.dart';
 
 class RecipesPage extends StatelessWidget {
   const RecipesPage({
