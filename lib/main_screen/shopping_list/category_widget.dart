@@ -13,12 +13,22 @@ class CategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.amber,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: const [
+            Color.fromARGB(255, 6, 246, 242),
+            Color.fromARGB(255, 243, 224, 14),
+          ],
+        ),
+      ),
       padding: EdgeInsets.all(30.0),
       margin: EdgeInsets.all(10.0),
       child: Row(
         children: [
-          Text(title),
+          Text(
+            title,
+            textAlign: TextAlign.justify,
+          ),
         ],
       ),
     );

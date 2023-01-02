@@ -78,7 +78,14 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
                         .deletedocuments(document.id);
                   },
                   child: Container(
-                    color: Colors.amber,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: const [
+                          Color.fromARGB(255, 6, 246, 242),
+                          Color.fromARGB(255, 243, 224, 14),
+                        ],
+                      ),
+                    ),
                     margin: EdgeInsets.all(5.0),
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),

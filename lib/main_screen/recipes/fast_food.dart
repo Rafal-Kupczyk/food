@@ -14,75 +14,158 @@ class FastFoodPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                      Color.fromARGB(255, 70, 178, 255))),
-              onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                    title: Text(
-                      'Przepis na tortille',
-                      textAlign: TextAlign.center,
-                    ),
-                    insetPadding: EdgeInsets.zero,
-                    content: SingleChildScrollView(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 16,
-                            width: MediaQuery.of(context).size.width,
-                          ),
-                          Text(
-                            'HelloHelloHelloHelloHelloHelloHelloHelloHHelloHelloHelloHelloHelloHelloello',
-                            textAlign: TextAlign.center,
-                          ),
-                          SizedBox(
-                            height: 15,
-                          ),
-                          Text(
-                            'Description',
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
-                    actions: [
-                      TextButton(
-                        onPressed: () {
-                          showDialog(
-                            context: context,
-                            builder: (context) => AlertDialog(
-                              content: Text(
-                                'Cebula, Bekon, Ser Cebula, Bekon, Ser Cebula, Bekon, Ser',
-                                textAlign: TextAlign.center,
-                              ),
-                              actions: [
-                                TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('OK'))
-                              ],
-                            ),
-                          );
-                        },
-                        child: Text('Skladniki'),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Text('OK'),
-                      ),
-                    ],
+            SizedBox(
+              width: 250,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF02EAFF),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
                   ),
-                );
-              },
-              child: Text('Tortilla'),
+                ),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Text(
+                        'Przepis na tortille',
+                        textAlign: TextAlign.center,
+                      ),
+                      insetPadding: EdgeInsets.zero,
+                      content: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 16,
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                            Text(
+                              'HelloHelloHelloHelloHelloHelloHelloHelloHHelloHelloHelloHelloHelloHelloello',
+                              textAlign: TextAlign.center,
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Text(
+                              'Description',
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                content: Text(
+                                  'Cebula, Bekon, Ser Cebula, Bekon, Ser Cebula, Bekon, Ser',
+                                  textAlign: TextAlign.center,
+                                ),
+                                actions: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text('OK'))
+                                ],
+                              ),
+                            );
+                          },
+                          child: Text('Skladniki'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text('OK'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: Text('Tortilla'),
+              ),
+            ),
+            SizedBox(height: 10),
+            SizedBox(
+              width: 250,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF02EAFF),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Text(
+                        'Przepis na tortille',
+                        textAlign: TextAlign.center,
+                      ),
+                      insetPadding: EdgeInsets.zero,
+                      content: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 16,
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                            Text(
+                              'HelloHelloHelloHelloHelloHelloHelloHelloHHelloHelloHelloHelloHelloHelloello',
+                              textAlign: TextAlign.center,
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Text(
+                              'Description',
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                content: Text(
+                                  'Cebula, Bekon, Ser Cebula, Bekon, Ser Cebula, Bekon, Ser',
+                                  textAlign: TextAlign.center,
+                                ),
+                                actions: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text('OK'))
+                                ],
+                              ),
+                            );
+                          },
+                          child: Text('Skladniki'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text('OK'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: Text('Mięso w cieście francuskim'),
+              ),
             ),
           ],
         ),

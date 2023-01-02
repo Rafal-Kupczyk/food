@@ -26,6 +26,12 @@ class _AddReustarantsPageState extends State<AddReustarantsPage> {
             TextField(
               decoration: const InputDecoration(
                 hintText: 'Podaj nazwę restauracji',
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color.fromARGB(255, 3, 255, 66),
+                    width: 1.0,
+                  ),
+                ),
               ),
               onChanged: (newValue) {
                 setState(() {
@@ -36,6 +42,12 @@ class _AddReustarantsPageState extends State<AddReustarantsPage> {
             TextField(
               decoration: const InputDecoration(
                 hintText: 'Podaj adres restauracji',
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color.fromARGB(255, 3, 255, 66),
+                    width: 1.0,
+                  ),
+                ),
               ),
               onChanged: (newValue) {
                 setState(() {
@@ -44,6 +56,8 @@ class _AddReustarantsPageState extends State<AddReustarantsPage> {
               },
             ),
             Slider(
+              activeColor: const Color.fromARGB(255, 6, 187, 237),
+              thumbColor: const Color.fromARGB(255, 3, 235, 11),
               onChanged: (newValue) {
                 setState(() {
                   rating = newValue;

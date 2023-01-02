@@ -12,8 +12,8 @@ class ReustarantsPageCubit extends Cubit<ReustarantsPageState> {
   String? id;
 
   ReustarantsPageCubit()
-      : super(ReustarantsPageState(
-          documents: const [],
+      : super(const ReustarantsPageState(
+          documents: [],
           errorMessage: '',
           isLoading: false,
         ));
@@ -26,8 +26,8 @@ class ReustarantsPageCubit extends Cubit<ReustarantsPageState> {
 
   Future<void> start() async {
     emit(
-      ReustarantsPageState(
-        documents: const [],
+      const ReustarantsPageState(
+        documents: [],
         errorMessage: '',
         isLoading: true,
       ),

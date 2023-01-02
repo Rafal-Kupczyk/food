@@ -38,29 +38,47 @@ class ShoppingListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Lista zakupow'),
-        flexibleSpace: AppBarColorPage(),
-      ),
-      floatingActionButton: BlocProvider(
-        create: (context) => ShoppingListCubit(),
-        child: BlocBuilder<ShoppingListCubit, ShoppingListState>(
+    return BlocProvider(
+      create: (context) => ShoppingListCubit()..start(),
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text('Lista zakupow'),
+          flexibleSpace: AppBarColorPage(),
+        ),
+        floatingActionButton: BlocBuilder<ShoppingListCubit, ShoppingListState>(
           builder: (context, state) {
-            return FloatingActionButton(
-              onPressed: () {
-                context.read<ShoppingListCubit>().getdocuments(controller.text);
-                controller.clear();
-              },
-              child: const Icon(Icons.add),
+            return Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomCenter,
+                  stops: const [
+                    0.3,
+                    1.2,
+                  ],
+                  colors: const [
+                    Color.fromARGB(255, 8, 240, 248),
+                    Color.fromARGB(223, 12, 68, 222)
+                  ],
+                ),
+              ),
+              child: FloatingActionButton(
+                backgroundColor: Color.fromARGB(0, 255, 23, 23),
+                elevation: 0,
+                onPressed: () {
+                  context
+                      .read<ShoppingListCubit>()
+                      .getdocuments(controller.text);
+                  controller.clear();
+                },
+                child: const Icon(Icons.add),
+              ),
             );
           },
         ),
-      ),
-      body: BlocProvider(
-        create: (context) => ShoppingListCubit()..start(),
-        child: BlocBuilder<ShoppingListCubit, ShoppingListState>(
+        body: BlocBuilder<ShoppingListCubit, ShoppingListState>(
           builder: (context, state) {
             {
               if (state.errorMessage.isNotEmpty) {
@@ -106,7 +124,15 @@ class ShoppingListPage extends StatelessWidget {
                     ),
                   ],
                   TextField(
-                    decoration: InputDecoration(hintText: 'Wpisz produkt '),
+                    decoration: InputDecoration(
+                      hintText: 'Wpisz produkt ',
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 3, 255, 66),
+                          width: 1.0,
+                        ),
+                      ),
+                    ),
                     controller: controller,
                   ),
                   SizedBox(height: 30),
