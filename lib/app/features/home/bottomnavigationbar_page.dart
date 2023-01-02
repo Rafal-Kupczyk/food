@@ -2,9 +2,9 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food/app/features/homepage/home_page.dart';
-import 'package:food/app/features/home/myaccount/my_account.dart';
-import 'package:food/app/features/home/random/random_page.dart';
+import 'package:food/App/homepage/home_page.dart';
+import 'package:food/App/features/home/myaccount/my_account.dart';
+import 'package:food/App/features/home/random/random_page.dart';
 
 class BarPage extends StatefulWidget {
   const BarPage({
@@ -31,7 +31,9 @@ class _BarPageState extends State<BarPage> {
           return RandomPage();
         }
         if (currentIndex == 2) {}
-        return MyAccountPage(widget: widget);
+        return MyAccountPage(
+          email: widget.user.email,
+        );
       }),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color.fromARGB(255, 245, 157, 6),

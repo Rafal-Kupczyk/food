@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore
 
 import 'package:flutter/material.dart';
-import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
-import 'package:food/app/features/main_screen/favorites_reustarants/favorites_reustarants_page.dart';
-import 'package:food/app/features/main_screen/ingredients/ingredients_page.dart';
-import 'package:food/app/features/main_screen/recipes_page.dart';
-import 'package:food/app/features/main_screen/shopping_list/cubit/shopping_list.dart';
+import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
+import 'package:food/App/features/main_screen/favorites_reustarants/favorites_reustarants_page.dart';
+import 'package:food/App/features/main_screen/ingredients/ingredients_page.dart';
+import 'package:food/App/features/main_screen/recipes_page.dart';
+import 'package:food/App/features/main_screen/shopping_list/cubit/shopping_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -170,7 +170,6 @@ class _HomePageState extends State<HomePage> {
                         side: BorderSide(
                           color: Color.fromARGB(255, 236, 168, 9),
                           width: 1.5,
-                        
                         ),
                       ),
                     ),

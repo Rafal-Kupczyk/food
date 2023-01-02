@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food/app/features/main_screen/favorites_reustarants/reustarants_page_content/cubit/reustarants_cubit.dart';
+import 'package:food/App/features/main_screen/favorites_reustarants/reustarants_page_content/cubit/reustarants_cubit.dart';
 
 class ReustarantsPage extends StatefulWidget {
   const ReustarantsPage({super.key});

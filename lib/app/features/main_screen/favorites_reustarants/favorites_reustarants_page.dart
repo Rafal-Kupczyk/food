@@ -2,11 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
+import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
+import 'package:food/App/features/main_screen/favorites_reustarants/reustarants_page_content/reustarants_page.dart';
 import 'package:food/firebase_options.dart';
-import 'package:food/app/features/main_screen/favorites_reustarants/add_reustarants_page.dart';
-import 'package:food/app/features/main_screen/favorites_reustarants/reustarants_page_content/reustarants_page.dart';
-
+import 'package:food/App/features/main_screen/favorites_reustarants/add_reustarants_page.dart';
 
 void main() async {
   WidgetsFlutterBinding();
