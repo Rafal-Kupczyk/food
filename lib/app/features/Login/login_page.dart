@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors,
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:food/App/cubit/root_cubit.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({
@@ -55,11 +56,9 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () async {
                   if (isCreatingAccount == true) {
                     try {
-                      await FirebaseAuth.instance
-                          .createUserWithEmailAndPassword(
-                        email: widget.emailController.text,
-                        password: widget.passwordController.text,
-                      );
+                      await context.read<RootCubit>().createaccount(
+                          email: widget.emailController.text,
+                          password: widget.passwordController.text);
                     } catch (error) {
                       setState(() {
                         errorMessage = error.toString();
@@ -67,21 +66,15 @@ class _LoginPageState extends State<LoginPage> {
                     }
                   } else {
                     try {
-                      await FirebaseAuth.instance.signInWithEmailAndPassword(
-                        email: widget.emailController.text,
-                        password: widget.passwordController.text,
-                      );
+                      await context.read<RootCubit>().loginaccount(
+                          email: widget.emailController.text,
+                          password: widget.passwordController.text);
                     } catch (error) {
                       setState(() {
                         errorMessage = error.toString();
                       });
                     }
                   }
-
-                  await FirebaseAuth.instance.signInWithEmailAndPassword(
-                    email: widget.emailController.text,
-                    password: widget.passwordController.text,
-                  );
                 },
                 child: Text(isCreatingAccount == true
                     ? 'Zarejestruj sie'

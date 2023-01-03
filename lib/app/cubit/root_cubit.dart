@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 
 part 'root_state.dart';
@@ -22,7 +23,21 @@ class RootCubit extends Cubit<RootState> {
     FirebaseAuth.instance.signOut();
   }
 
+  Future<void> createaccount(
+      {required String email, required String password}) async {
+    FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+  }
 
+  Future<void> loginaccount(
+      {required String email, required String password}) async {
+    FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+  }
 
   Future<void> start() async {
     emit(
