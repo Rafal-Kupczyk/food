@@ -73,8 +73,8 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
                     },
                   ),
                   onDismissed: (_) {
-                    context
-                        .read<ReustarantsPageCubit>()
+                 context
+                        .read<ReustarantsPageCubit>()   
                         .deletedocuments(document.id);
                   },
                   child: Container(
