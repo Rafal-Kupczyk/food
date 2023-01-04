@@ -67,12 +67,18 @@ class ReustarantsPageCubit extends Cubit<ReustarantsPageState> {
         .collection('reustarants')
         .orderBy('rating', descending: true)
         .snapshots()
-        .listen((data) {
-            
+        .listen((items) {
+      final itemModels = items.docs.map((doc) {
+        return ItemModel(
+          id: doc.id,
+          reustarantName: doc['name'],
+          adresName: doc['adres'],
+          rating: doc['rating'].toString(),
+        );
+      }).toList();
       emit(
-     
         ReustarantsPageState(
-          documents: data.docs,
+          documents: itemModels,
           isLoading: false,
           errorMessage: '',
           reustarantName: '',

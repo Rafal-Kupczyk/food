@@ -2,7 +2,7 @@ part of 'reustarants_cubit.dart';
 
 @immutable
 class ReustarantsPageState {
-  final List<QueryDocumentSnapshot<Map<String, dynamic>>> documents;
+  final List<ItemModel> documents;
 
   final bool isLoading;
   final String errorMessage;

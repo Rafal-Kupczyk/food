@@ -29,14 +29,14 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
             return Center(child: CircularProgressIndicator());
           }
 
-          final documents = state.documents;
+          final itemModels = state.documents;
 
           return ListView(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              for (final document in documents) ...[
+              for (final itemModel in itemModels) ...[
                 Dismissible(
-                  key: ValueKey(document.id),
+                  key: ValueKey(itemModel.id),
                   background: DecoratedBox(
                     decoration: BoxDecoration(color: Colors.red),
                     child: Align(
@@ -73,9 +73,9 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
                     },
                   ),
                   onDismissed: (_) {
-                 context
-                        .read<ReustarantsPageCubit>()   
-                        .deletedocuments(document.id);
+                    context
+                        .read<ReustarantsPageCubit>()
+                        .deletedocuments(itemModel.id);
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -95,11 +95,11 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(document['name']),
-                              Text(document['adres']),
+                              Text(itemModel.reustarantName),
+                              Text(itemModel.adresName),
                             ],
                           ),
-                          Text(document['rating'].toString()),
+                          Text(itemModel.rating.toString()),
                         ],
                       ),
                     ),
