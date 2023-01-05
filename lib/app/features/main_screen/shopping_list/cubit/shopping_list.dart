@@ -90,13 +90,13 @@ class ShoppingListPage extends StatelessWidget {
                 return const Text('Prosze czekac,trwa ladowanie danych');
               }
 
-              final documents = state.documents;
+              final shopingModels = state.documents;
 
               return ListView(
                 children: [
-                  for (final document in documents) ...[
+                  for (final shopingModel in shopingModels) ...[
                     Dismissible(
-                      key: ValueKey(document.id),
+                      key: ValueKey(shopingModel.id),
                       background: const DecoratedBox(
                         decoration: BoxDecoration(
                           color: Colors.red,
@@ -117,11 +117,9 @@ class ShoppingListPage extends StatelessWidget {
                       onDismissed: (_) {
                         context
                             .read<ShoppingListCubit>()
-                            .deletedocuments(document.id);
+                            .deletedocuments(shopingModel.id);
                       },
-                      child: CategoryWidget(
-                        document['title'],
-                      ),
+                      child: CategoryWidget(shopingModel.title),
                     ),
                   ],
                   TextField(

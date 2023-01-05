@@ -2,9 +2,9 @@ part of 'shopping_list_cubit.dart';
 
 @immutable
 class ShoppingListState {
-  final List<QueryDocumentSnapshot<Map<String, dynamic>>> documents;
+  final List<ShopingModel> documents;
 
-    final bool isLoading;
+  final bool isLoading;
   final String errorMessage;
 
   const ShoppingListState({
