@@ -28,8 +28,9 @@ class DrawPage extends StatelessWidget {
         centerTitle: true,
         flexibleSpace: AppBarColorPage(),
       ),
-      body: Center(
-        child: Column(
+      body: ListView(children: [
+        SizedBox(height: 100),
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (result == 1)
@@ -73,7 +74,7 @@ class DrawPage extends StatelessWidget {
             )
           ],
         ),
-      ),
+      ]),
     );
   }
 }

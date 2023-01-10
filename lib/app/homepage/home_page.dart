@@ -29,241 +29,241 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
           flexibleSpace: AppBarColorPage(),
         ),
-
-        // ignore: prefer_const_literals_to_create_immutables
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 300,
-                height: 50,
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 46, 255, 252),
-                        Color.fromARGB(255, 3, 255, 83),
-                      ],
-                    ),
-                  ),
-                  child: ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                      shadowColor: Color.fromARGB(255, 95, 195, 242),
-                      elevation: 10,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Color.fromARGB(255, 236, 168, 9),
-                          width: 1.5,
-                        ),
+        body: ListView(
+          children: [
+            SizedBox(height: 150),
+            Column(
+              children: [
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 46, 255, 252),
+                          Color.fromARGB(255, 3, 255, 83),
+                        ],
                       ),
                     ),
-                    icon: Icon(
-                      Icons.flatware,
-                      color: Color.fromARGB(255, 27, 255, 7),
-                    ),
-                    onHover: (hovered) => setState(() {
-                      isPressed = hovered;
-                    }),
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => RecipesPage(),
+                    child: ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Color.fromARGB(255, 236, 168, 9),
+                            width: 1.5,
+                          ),
                         ),
-                      );
-                    },
-                    label: Text(
-                      'Przepisy',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        shadows: [
-                          for (double i = 10; i < (isPressed ? 8 : 4); i++)
-                            Shadow(
-                              color: shadowColor,
-                              blurRadius: 1 * i,
-                            ),
-                        ],
+                      ),
+                      icon: Icon(
+                        Icons.flatware,
+                        color: Color.fromARGB(255, 27, 255, 7),
+                      ),
+                      onHover: (hovered) => setState(() {
+                        isPressed = hovered;
+                      }),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => RecipesPage(),
+                          ),
+                        );
+                      },
+                      label: Text(
+                        'Przepisy',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          shadows: [
+                            for (double i = 10; i < (isPressed ? 8 : 4); i++)
+                              Shadow(
+                                color: shadowColor,
+                                blurRadius: 1 * i,
+                              ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 30),
-              SizedBox(
-                width: 300,
-                height: 50,
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 46, 255, 252),
-                        Color.fromARGB(255, 3, 255, 83),
-                      ],
-                    ),
-                  ),
-                  child: ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                      shadowColor: Color.fromARGB(255, 95, 195, 242),
-                      elevation: 10,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Color.fromARGB(255, 236, 168, 9),
-                          width: 1.5,
-                        ),
+                SizedBox(height: 30),
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 46, 255, 252),
+                          Color.fromARGB(255, 3, 255, 83),
+                        ],
                       ),
                     ),
-                    icon: Icon(
-                      Icons.local_dining,
-                      color: Color.fromARGB(255, 252, 190, 4),
-                    ),
-                    onHover: (hovered) => setState(() {
-                      isPressed = hovered;
-                    }),
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => IngredientsPage(),
+                    child: ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Color.fromARGB(255, 236, 168, 9),
+                            width: 1.5,
+                          ),
                         ),
-                      );
-                    },
-                    label: Text(
-                      'Składniki',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        shadows: [
-                          for (double i = 10; i < (isPressed ? 8 : 4); i++)
-                            Shadow(
-                              color: shadowColor,
-                              blurRadius: 1 * i,
-                            ),
-                        ],
+                      ),
+                      icon: Icon(
+                        Icons.local_dining,
+                        color: Color.fromARGB(255, 252, 190, 4),
+                      ),
+                      onHover: (hovered) => setState(() {
+                        isPressed = hovered;
+                      }),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => IngredientsPage(),
+                          ),
+                        );
+                      },
+                      label: Text(
+                        'Składniki',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          shadows: [
+                            for (double i = 10; i < (isPressed ? 8 : 4); i++)
+                              Shadow(
+                                color: shadowColor,
+                                blurRadius: 1 * i,
+                              ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 30),
-              SizedBox(
-                width: 300,
-                height: 50,
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 46, 255, 252),
-                        Color.fromARGB(255, 3, 255, 83),
-                      ],
-                    ),
-                  ),
-                  child: ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                      shadowColor: Color.fromARGB(255, 95, 195, 242),
-                      elevation: 10,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Color.fromARGB(255, 236, 168, 9),
-                          width: 1.5,
-                        ),
+                SizedBox(height: 30),
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 46, 255, 252),
+                          Color.fromARGB(255, 3, 255, 83),
+                        ],
                       ),
                     ),
-                    icon: Icon(
-                      Icons.favorite,
-                      color: Color.fromARGB(255, 239, 18, 2),
-                    ),
-                    onHover: (hovered) => setState(() {
-                      isPressed = hovered;
-                    }),
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => FavoritesPage(),
+                    child: ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Color.fromARGB(255, 236, 168, 9),
+                            width: 1.5,
+                          ),
                         ),
-                      );
-                    },
-                    label: Text(
-                      'Ulubione restauracje',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        shadows: [
-                          for (double i = 10; i < (isPressed ? 8 : 4); i++)
-                            Shadow(
-                              color: shadowColor,
-                              blurRadius: 1 * i,
-                            ),
-                        ],
+                      ),
+                      icon: Icon(
+                        Icons.favorite,
+                        color: Color.fromARGB(255, 239, 18, 2),
+                      ),
+                      onHover: (hovered) => setState(() {
+                        isPressed = hovered;
+                      }),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => FavoritesPage(),
+                          ),
+                        );
+                      },
+                      label: Text(
+                        'Ulubione restauracje',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          shadows: [
+                            for (double i = 10; i < (isPressed ? 8 : 4); i++)
+                              Shadow(
+                                color: shadowColor,
+                                blurRadius: 1 * i,
+                              ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 30),
-              SizedBox(
-                width: 300,
-                height: 50,
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 46, 255, 252),
-                        Color.fromARGB(255, 3, 255, 83),
-                      ],
-                    ),
-                  ),
-                  child: ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                      shadowColor: Color.fromARGB(255, 95, 195, 242),
-                      elevation: 10,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Color.fromARGB(255, 236, 168, 9),
-                          width: 1.5,
-                        ),
+                SizedBox(height: 30),
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 46, 255, 252),
+                          Color.fromARGB(255, 3, 255, 83),
+                        ],
                       ),
                     ),
-                    icon: Icon(
-                      Icons.auto_stories,
-                      color: Color.fromARGB(255, 248, 248, 1),
-                    ),
-                    onHover: (hovered) => setState(() {
-                      isPressed = hovered;
-                    }),
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => ShoppingListPage(),
+                    child: ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Color.fromARGB(255, 236, 168, 9),
+                            width: 1.5,
+                          ),
                         ),
-                      );
-                    },
-                    label: Text(
-                      'Lista zakupow',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        shadows: [
-                          for (double i = 10; i < (isPressed ? 8 : 4); i++)
-                            Shadow(
-                              color: shadowColor,
-                              blurRadius: 1 * i,
-                            ),
-                        ],
+                      ),
+                      icon: Icon(
+                        Icons.auto_stories,
+                        color: Color.fromARGB(255, 248, 248, 1),
+                      ),
+                      onHover: (hovered) => setState(() {
+                        isPressed = hovered;
+                      }),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => ShoppingListPage(),
+                          ),
+                        );
+                      },
+                      label: Text(
+                        'Lista zakupow',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          shadows: [
+                            for (double i = 10; i < (isPressed ? 8 : 4); i++)
+                              Shadow(
+                                color: shadowColor,
+                                blurRadius: 1 * i,
+                              ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );
