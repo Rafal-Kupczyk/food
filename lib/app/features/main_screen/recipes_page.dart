@@ -37,12 +37,19 @@ class RecipesPage extends StatelessWidget {
                 ),
               ],
             ),
-            title: const Text('Przepisy'),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text('Przepisy'),
+                SizedBox(width: 15),
+                Icon(Icons.restaurant_menu),
+              ],
+            ),
           ),
-          body: const TabBarView(
-            children: [
+          body: TabBarView(
+            children: const [
               FastFoodPage(),
-              LunchFood(),
+              LunchPage(),
               SaladPage(),
             ],
           ),

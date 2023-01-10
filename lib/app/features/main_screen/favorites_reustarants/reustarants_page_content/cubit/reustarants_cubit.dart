@@ -3,8 +3,9 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:food/models/item_model.dart';
+import 'package:food/repositories/items_repository.dart';
 
 import 'package:meta/meta.dart';
 
@@ -13,7 +14,7 @@ part 'reustarants_state.dart';
 class ReustarantsPageCubit extends Cubit<ReustarantsPageState> {
   String? id;
 
-  ReustarantsPageCubit()
+  ReustarantsPageCubit(this._itemsRepository)
       : super(const ReustarantsPageState(
           documents: [],
           errorMessage: '',
@@ -23,20 +24,19 @@ class ReustarantsPageCubit extends Cubit<ReustarantsPageState> {
           rating: '',
         ));
 
+  final ItemsRepository _itemsRepository;
+
   StreamSubscription? _streamSubscription;
 
   Future<void> deletedocuments(String id) async {
-    FirebaseFirestore.instance.collection('reustarants').doc(id).delete();
+    await _itemsRepository.delete(id: id);
   }
 
   Future<void> addReustarant(
       String reustarantName, String adresName, String rating) async {
     try {
-      await FirebaseFirestore.instance.collection('reustarants').add({
-        'name': reustarantName,
-        'adres': adresName,
-        'rating': rating,
-      });
+      await _itemsRepository.add(
+          reustarantName: reustarantName, adresName: adresName, rating: rating);
     } catch (error) {
       emit(
         ReustarantsPageState(
@@ -63,22 +63,10 @@ class ReustarantsPageCubit extends Cubit<ReustarantsPageState> {
       ),
     );
 
-    _streamSubscription = FirebaseFirestore.instance
-        .collection('reustarants')
-        .orderBy('rating', descending: true)
-        .snapshots()
-        .listen((items) {
-      final itemModels = items.docs.map((doc) {
-        return ItemModel(
-          id: doc.id,
-          reustarantName: doc['name'],
-          adresName: doc['adres'],
-          rating: doc['rating'].toString(),
-        );
-      }).toList();
+    _streamSubscription = _itemsRepository.getItemsStream().listen((items) {
       emit(
         ReustarantsPageState(
-          documents: itemModels,
+          documents: items,
           isLoading: false,
           errorMessage: '',
           reustarantName: '',

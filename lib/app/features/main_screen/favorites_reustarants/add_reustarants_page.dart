@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food/App/features/main_screen/favorites_reustarants/reustarants_page_content/cubit/reustarants_cubit.dart';
+import 'package:food/repositories/items_repository.dart';
 
 class AddReustarantsPage extends StatefulWidget {
   const AddReustarantsPage({super.key, required this.onSave});
@@ -19,7 +20,7 @@ class _AddReustarantsPageState extends State<AddReustarantsPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ReustarantsPageCubit()..start(),
+      create: (context) => ReustarantsPageCubit(ItemsRepository())..start(),
       child: BlocBuilder<ReustarantsPageCubit, ReustarantsPageState>(
         builder: (context, state) {
           return Center(
