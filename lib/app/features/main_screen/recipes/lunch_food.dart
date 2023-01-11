@@ -5,7 +5,7 @@ class LunchPage extends StatefulWidget {
   const LunchPage({super.key});
 
   @override
-  _LunchPageState createState() => _LunchPageState();
+  State<LunchPage> createState() => _LunchPageState();
 }
 
 class _LunchPageState extends State<LunchPage> {

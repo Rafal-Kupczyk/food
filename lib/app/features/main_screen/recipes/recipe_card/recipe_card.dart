@@ -34,7 +34,7 @@ class RecipeCard extends StatelessWidget {
         ],
         image: DecorationImage(
           colorFilter: ColorFilter.mode(
-            Colors.black.withOpacity(0.35),
+            Colors.black.withOpacity(0.15),
             BlendMode.multiply,
           ),
           image: NetworkImage(thumbnailUrl),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_page.dart';
 
 import 'package:food/App/features/main_screen/recipes/recipe_card/recipe_card.dart';
 
@@ -7,10 +7,10 @@ class FastFoodPage extends StatefulWidget {
   const FastFoodPage({super.key});
 
   @override
-  _LunchPageState createState() => _LunchPageState();
+  State<FastFoodPage> createState() => _FastFoodPageState();
 }
 
-class _LunchPageState extends State<FastFoodPage> {
+class _FastFoodPageState extends State<FastFoodPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _LunchPageState extends State<FastFoodPage> {
             child: const RecipeCard(
               title: 'Tortilla',
               rating: '4.5',
-              cookTime: '30 min',
+              cookTime: '60 min',
               thumbnailUrl:
                   'https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem.jpg',
             ),
@@ -33,11 +33,11 @@ class _LunchPageState extends State<FastFoodPage> {
           InkWell(
             onTap: () {},
             child: const RecipeCard(
-              title: 'Tortilla',
-              rating: '4.9',
-              cookTime: '30 min',
+              title: 'Hamburger',
+              rating: '3.8',
+              cookTime: '20 min',
               thumbnailUrl:
-                  'https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem.jpg',
+                  'https://www.canalpluskuchnia.pl/wideo/43821-grzeszne-przyjemnosci/01-hamburger.jpg',
             ),
           ),
           InkWell(
