@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HamburgerIngredients extends StatelessWidget {
-  const HamburgerIngredients({super.key});
+class HotDogIngredients extends StatelessWidget {
+  const HotDogIngredients({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  '4 kotlety wołowe',
+                  '3 ulubione parówki lub podłużne kiełbaski.',
                   style: GoogleFonts.prompt(
                     textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                   ),
@@ -47,7 +47,7 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('2 Bułki do hamburgera',
+                child: Text('3 bułki do hot dogów.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -68,7 +68,7 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('Czerwona cebula',
+                child: Text('Ogórek kiszony, konserwowy lub świeży.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -91,7 +91,7 @@ class HamburgerIngredients extends StatelessWidget {
                 width: 20,
               ),
               Expanded(
-                child: Text('Pomidor',
+                child: Text('Sałata rzymska, lodowa lub rukola.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -114,7 +114,7 @@ class HamburgerIngredients extends StatelessWidget {
                 width: 20,
               ),
               Expanded(
-                child: Text('Ser cheddar',
+                child: Text('Kawałek czerwonej lub białej cebuli.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -135,7 +135,7 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('Przyprawa do mięsa mielonego',
+                child: Text('Średniej wielkości pomidor',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -158,28 +158,8 @@ class HamburgerIngredients extends StatelessWidget {
                 width: 20,
               ),
               Expanded(
-                child: Text('Sos czosnkowy/ostry',
-                    style: GoogleFonts.prompt(
-                      textStyle:
-                          const TextStyle(letterSpacing: .1, fontSize: 16),
-                    )),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              const Center(
-                child: Icon(
-                  Icons.brightness_1_rounded,
-                  size: 20,
-                ),
-              ),
-              const SizedBox(width: 20),
-              Expanded(
-                child: Text('Olej do smażenia',
+                child: Text(
+                    'Inne dodatki: prażona cebula, ketchup, musztarda, majonez.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),

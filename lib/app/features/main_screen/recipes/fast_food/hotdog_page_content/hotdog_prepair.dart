@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class HamburgerIngredients extends StatelessWidget {
-  const HamburgerIngredients({super.key});
+class HotDogPrepair extends StatelessWidget {
+  const HotDogPrepair({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  '4 kotlety wołowe',
+                  'Bułki do hot dogów przetnij na pół, jednak nie rozcinaj bułek do końca, by otrzymać dwie osobne kanapki. Rozchyl każdą bułkę, by można było umieścić w nich dodatki.',
                   style: GoogleFonts.prompt(
                     textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                   ),
@@ -47,7 +48,8 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('2 Bułki do hamburgera',
+                child: Text(
+                    'Do przekrojonej bułki wkładam najpierw trochę sałaty. Kolejno umieszczam też parzoną lub grillowaną kiełbaskę albo parówkę.  ',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -68,7 +70,8 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('Czerwona cebula',
+                child: Text(
+                    'Po bokach układam po kilka plasterków ogórków konserwowych oraz plasterki pomidorów. Dodatkowo odrobina czerwonej cebuli oraz prażona cebula.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -91,7 +94,7 @@ class HamburgerIngredients extends StatelessWidget {
                 width: 20,
               ),
               Expanded(
-                child: Text('Pomidor',
+                child: Text('Domowe hot dogi polewam przed podaniem ketchupem.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -114,7 +117,8 @@ class HamburgerIngredients extends StatelessWidget {
                 width: 20,
               ),
               Expanded(
-                child: Text('Ser cheddar',
+                child: Text(
+                    'Aby nadać hot dogom ostrości polecam dodatek papryczek jalapeños lub chili.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -135,7 +139,8 @@ class HamburgerIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('Przyprawa do mięsa mielonego',
+                child: Text(
+                    'Do hot dogów można też dodawać tarty ser, oliwki, czy też kiszoną kapustę lub kiełki.',
                     style: GoogleFonts.prompt(
                       textStyle:
                           const TextStyle(letterSpacing: .1, fontSize: 16),
@@ -144,51 +149,25 @@ class HamburgerIngredients extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              const Center(
-                child: Icon(
-                  Icons.brightness_1_rounded,
-                  size: 20,
-                ),
+        const SizedBox(height: 40),
+        Center(
+          child: GradientText(
+            'Smacznego! :)',
+            style: GoogleFonts.prompt(
+              textStyle: const TextStyle(
+                letterSpacing: 2,
+                fontSize: 40,
               ),
-              const SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                child: Text('Sos czosnkowy/ostry',
-                    style: GoogleFonts.prompt(
-                      textStyle:
-                          const TextStyle(letterSpacing: .1, fontSize: 16),
-                    )),
-              ),
+            ),
+            gradientType: GradientType.radial,
+            radius: 2,
+            colors: const [
+              Color.fromARGB(255, 0, 0, 0),
+              Color.fromARGB(255, 255, 17, 0),
+              Color.fromARGB(255, 255, 4, 209),
             ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              const Center(
-                child: Icon(
-                  Icons.brightness_1_rounded,
-                  size: 20,
-                ),
-              ),
-              const SizedBox(width: 20),
-              Expanded(
-                child: Text('Olej do smażenia',
-                    style: GoogleFonts.prompt(
-                      textStyle:
-                          const TextStyle(letterSpacing: .1, fontSize: 16),
-                    )),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 30),
+        )
       ],
     );
   }

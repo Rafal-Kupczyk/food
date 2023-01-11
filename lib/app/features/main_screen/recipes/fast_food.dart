@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/hamburger_page_content/hamburger_page.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/hotdog_page_content/hotdog_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_page.dart';
 
 import 'package:food/App/features/main_screen/recipes/recipe_card/recipe_card.dart';
@@ -46,7 +47,13 @@ class _FastFoodPageState extends State<FastFoodPage> {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const HotDogPage(),
+                ),
+              );
+            },
             child: const RecipeCard(
               title: 'Hot-Dog',
               rating: '3.5',

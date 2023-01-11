@@ -1,19 +1,20 @@
 
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/hamburger_page_content/hamburger_ingredients.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/hamburger_page_content/hamburger_others.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/hamburger_page_content/hamburger_prepair.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/hotdog_page_content/hotdog_ingredients.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/hotdog_page_content/hotdog_others.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/hotdog_page_content/hotdog_prepair.dart';
+
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
-class HamburgerPage extends StatefulWidget {
-  const HamburgerPage({super.key});
+class HotDogPage extends StatefulWidget {
+  const HotDogPage({super.key});
 
   @override
-  State<HamburgerPage> createState() => _HamburgerPageState();
+  State<HotDogPage> createState() => _HotDogPageState();
 }
 
-class _HamburgerPageState extends State<HamburgerPage> {
+class _HotDogPageState extends State<HotDogPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +44,7 @@ class _HamburgerPageState extends State<HamburgerPage> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                Text('Hamburger'),
+                Text('Hot-Dog'),
                 SizedBox(width: 15),
               ],
             ),
@@ -56,11 +57,11 @@ class _HamburgerPageState extends State<HamburgerPage> {
                 colors: [Color(0xFFBDFF06), Colors.orange],
               ),
             ),
-            child: const TabBarView(
+            child:  const TabBarView(
               children: [
-                HamburgerPrepair(),
-                HamburgerIngredients(),
-                HamburgerOthers()
+                HotDogPrepair(),
+                HotDogIngredients(),
+                HotDogOthers()
               ],
             ),
           ),

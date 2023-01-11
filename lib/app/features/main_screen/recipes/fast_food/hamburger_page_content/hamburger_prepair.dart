@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class HamburgeriPrepair extends StatelessWidget {
-  const HamburgeriPrepair({super.key});
+class HamburgerPrepair extends StatelessWidget {
+  const HamburgerPrepair({super.key});
 
   @override
   Widget build(BuildContext context) {
