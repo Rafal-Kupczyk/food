@@ -47,11 +47,12 @@ class HotDogIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('3 bułki do hot dogów.',
-                    style: GoogleFonts.prompt(
-                      textStyle:
-                          const TextStyle(letterSpacing: .1, fontSize: 16),
-                    )),
+                child: Text(
+                  '3 bułki do hot dogów.',
+                  style: GoogleFonts.prompt(
+                    textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                  ),
+                ),
               ),
             ],
           ),
@@ -68,11 +69,12 @@ class HotDogIngredients extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Expanded(
-                child: Text('Ogórek kiszony, konserwowy lub świeży.',
-                    style: GoogleFonts.prompt(
-                      textStyle:
-                          const TextStyle(letterSpacing: .1, fontSize: 16),
-                    )),
+                child: Text(
+                  'Ogórek kiszony, konserwowy lub świeży.',
+                  style: GoogleFonts.prompt(
+                    textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                  ),
+                ),
               ),
             ],
           ),

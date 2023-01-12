@@ -7,99 +7,99 @@ class HotDogOthers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: ListView(
-        children: [
-          SizedBox(height: 15),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(5.0),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+    return Column(
+      children: [
+        Expanded(
+          child: Center(
+            child: ListView(
+              children: [
+                SizedBox(height: 15),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Poziom trudnosci:',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
                         Text(
-                          'Poziom trudnosci:',
+                          'Łatwy',
                           style: TextStyle(
-                            fontSize: 25,
-                          ),
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
-                    Text(
-                      'Łatwy',
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            ),
-          ),
-          SizedBox(height: 15),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(5.0),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Ilość kalori na porcje:',
-                          style: TextStyle(fontSize: 25),
+                SizedBox(height: 15),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Ilość kalori:',
+                              style: TextStyle(fontSize: 25),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    Text(
-                      '400 kcal',
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          SizedBox(height: 15),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(5.0),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
                         Text(
-                          'Czas wykonania:',
+                          '400 kcal',
                           style: TextStyle(
-                            fontSize: 25,
-                          ),
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
-                    Text(
-                      '15 min',
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+                SizedBox(height: 15),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Czas wykonania:',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '15 min',
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-        ],
-      ),
+        )
+      ],
     );
   }
 }

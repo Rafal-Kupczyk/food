@@ -26,8 +26,8 @@ class _TortillaPageState extends State<TortillaPage> {
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
-              unselectedLabelStyle: TextStyle(fontSize: 14),
-              labelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              unselectedLabelStyle: TextStyle(fontSize: 12),
+              labelStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
               tabs: [
                 Tab(
                   child: Text('Przygotowanie'),
