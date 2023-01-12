@@ -97,17 +97,17 @@ class _FastFoodPageState extends State<FastFoodPage> {
                   'https://pliki.doradcasmaku.pl/zapiekanka-domowa0-4',
             ),
           ),
-          InkWell(
+         InkWell(
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => const NuggetsPage(),
-                ),
+                ), 
               );
             },
             child: const RecipeCard(
               title: 'Nuggetsy',
-              rating: '4.9',
+              rating: '3.5',
               cookTime: '30 min',
               thumbnailUrl:
                   'https://s3.przepisy.pl/przepisy3ii/img/variants/1280x0/nuggets7104311650895847000.jpg',
