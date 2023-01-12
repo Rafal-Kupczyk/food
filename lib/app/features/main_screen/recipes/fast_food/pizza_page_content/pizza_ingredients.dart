@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,24 +14,24 @@ class PizzaIngredients extends StatelessWidget {
           child: Center(
             child: ListView(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text(
                         '25 g świeżych drożdży (lub 7 g instant)',
                         style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
                       ),
                     ],
@@ -41,17 +41,17 @@ class PizzaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Text('150 ml ciepłej wody',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -60,19 +60,19 @@ class PizzaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text('1/2 łyżeczki cukru',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -81,17 +81,17 @@ class PizzaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Text('250 g mąki pszennej',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -100,19 +100,19 @@ class PizzaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text('1 łyżeczka soli',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -121,19 +121,19 @@ class PizzaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text(
                         '1 łyżka oliwy',
                         style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
                       ),
                     ],
@@ -143,13 +143,13 @@ class PizzaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -157,7 +157,7 @@ class PizzaIngredients extends StatelessWidget {
                             'Dotatki: ser, czerwona cebula, szynka itp + sos czosnkowy/ostry',
                             style: GoogleFonts.prompt(
                               textStyle:
-                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                                  const TextStyle(letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],

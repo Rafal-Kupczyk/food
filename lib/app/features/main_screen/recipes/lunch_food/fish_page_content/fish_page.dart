@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/fish_page_content/fish_ingredienst.dart';
@@ -24,7 +23,7 @@ class _FishPageState extends State<FishPage> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            flexibleSpace: AppBarColorPage(),
+            flexibleSpace: const AppBarColorPage(),
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
@@ -58,8 +57,8 @@ class _FishPageState extends State<FishPage> {
                 colors: [Color(0xFFBDFF06), Colors.orange],
               ),
             ),
-            child: TabBarView(
-              children: const [
+            child: const TabBarView(
+              children: [
                 FishPrepair(),
                 FishIngredients(),
                 FishOthers()

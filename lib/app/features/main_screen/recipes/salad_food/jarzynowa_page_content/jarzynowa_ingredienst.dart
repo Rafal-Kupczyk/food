@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,18 +14,18 @@ class JarzynowaIngredients extends StatelessWidget {
           child: Center(
             child: ListView(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -33,7 +33,7 @@ class JarzynowaIngredients extends StatelessWidget {
                           '3 średnie ziemniaki - 350 g',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -44,19 +44,19 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Expanded(
                         child: Text(
                             '4 duże lub więcej mniejszych marchewek - 450 g',
                             style: GoogleFonts.prompt(
                               textStyle:
-                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                                  const TextStyle(letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -66,20 +66,20 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
                         child: Text('2 cieńsze pietruszki - 200 g',
                             style: GoogleFonts.prompt(
                               textStyle:
-                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                                  const TextStyle(letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -89,18 +89,18 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Expanded(
                         child: Text('Korzeń selera',
                             style: GoogleFonts.prompt(
                               textStyle:
-                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                                  const TextStyle(letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -110,20 +110,20 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
                         child: Text('4 duże ogórki kiszone',
                             style: GoogleFonts.prompt(
                               textStyle:
-                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                                  const TextStyle(letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -133,13 +133,13 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -147,7 +147,7 @@ class JarzynowaIngredients extends StatelessWidget {
                           'Cebula',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -158,13 +158,13 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -172,7 +172,7 @@ class JarzynowaIngredients extends StatelessWidget {
                           'Puszka groszku konserwowego - 400 g',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -183,13 +183,13 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -197,7 +197,7 @@ class JarzynowaIngredients extends StatelessWidget {
                           '4 jajka',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -208,13 +208,13 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -222,7 +222,7 @@ class JarzynowaIngredients extends StatelessWidget {
                           '4 łyżki  majonezu',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -233,13 +233,13 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -247,7 +247,7 @@ class JarzynowaIngredients extends StatelessWidget {
                           '4 łyżki jogurtu naturalnego',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -258,13 +258,13 @@ class JarzynowaIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -272,7 +272,7 @@ class JarzynowaIngredients extends StatelessWidget {
                           'Przyprawy: pół płaskiej łyżeczki soli, 1/4 płaskiej łyżeczki pieprzu',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),

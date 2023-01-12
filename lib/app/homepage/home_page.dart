@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore
 
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
@@ -20,25 +19,25 @@ class _HomePageState extends State<HomePage> {
   bool isPressed = false;
   @override
   Widget build(BuildContext context) {
-    Color shadowColor = Color.fromARGB(255, 255, 182, 10);
+    Color shadowColor = const Color.fromARGB(255, 255, 182, 10);
 
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text(':)'),
+          title: const Text(':)'),
           centerTitle: true,
-          flexibleSpace: AppBarColorPage(),
+          flexibleSpace: const AppBarColorPage(),
         ),
         body: ListView(
           children: [
-            SizedBox(height: 150),
+            const SizedBox(height: 150),
             Column(
               children: [
                 SizedBox(
                   width: 300,
                   height: 50,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
                           Color.fromARGB(255, 46, 255, 252),
@@ -48,17 +47,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        backgroundColor: const Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: const Color.fromARGB(255, 95, 195, 242),
                         elevation: 10,
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           side: BorderSide(
                             color: Color.fromARGB(255, 236, 168, 9),
                             width: 1.5,
                           ),
                         ),
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.flatware,
                         color: Color.fromARGB(255, 27, 255, 7),
                       ),
@@ -68,14 +67,14 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => RecipesPage(),
+                            builder: (_) => const RecipesPage(),
                           ),
                         );
                       },
                       label: Text(
                         'Przepisy',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                           shadows: [
@@ -90,12 +89,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 SizedBox(
                   width: 300,
                   height: 50,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
                           Color.fromARGB(255, 46, 255, 252),
@@ -105,17 +104,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        backgroundColor: const Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: const Color.fromARGB(255, 95, 195, 242),
                         elevation: 10,
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           side: BorderSide(
                             color: Color.fromARGB(255, 236, 168, 9),
                             width: 1.5,
                           ),
                         ),
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.local_dining,
                         color: Color.fromARGB(255, 252, 190, 4),
                       ),
@@ -125,14 +124,14 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => IngredientsPage(),
+                            builder: (_) => const IngredientsPage(),
                           ),
                         );
                       },
                       label: Text(
                         'Składniki',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                           shadows: [
@@ -147,12 +146,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 SizedBox(
                   width: 300,
                   height: 50,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
                           Color.fromARGB(255, 46, 255, 252),
@@ -162,17 +161,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        backgroundColor: const Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: const Color.fromARGB(255, 95, 195, 242),
                         elevation: 10,
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           side: BorderSide(
                             color: Color.fromARGB(255, 236, 168, 9),
                             width: 1.5,
                           ),
                         ),
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.favorite,
                         color: Color.fromARGB(255, 239, 18, 2),
                       ),
@@ -182,14 +181,14 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => FavoritesPage(),
+                            builder: (_) => const FavoritesPage(),
                           ),
                         );
                       },
                       label: Text(
                         'Ulubione restauracje',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                           shadows: [
@@ -204,12 +203,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 SizedBox(
                   width: 300,
                   height: 50,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
                           Color.fromARGB(255, 46, 255, 252),
@@ -219,17 +218,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(0, 232, 20, 20),
-                        shadowColor: Color.fromARGB(255, 95, 195, 242),
+                        backgroundColor: const Color.fromARGB(0, 232, 20, 20),
+                        shadowColor: const Color.fromARGB(255, 95, 195, 242),
                         elevation: 10,
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           side: BorderSide(
                             color: Color.fromARGB(255, 236, 168, 9),
                             width: 1.5,
                           ),
                         ),
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.auto_stories,
                         color: Color.fromARGB(255, 248, 248, 1),
                       ),
@@ -246,7 +245,7 @@ class _HomePageState extends State<HomePage> {
                       label: Text(
                         'Lista zakupow',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                           shadows: [

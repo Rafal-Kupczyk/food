@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+
 
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/casserole_page_content/casserole_ingredients.dart';
@@ -23,7 +23,7 @@ class _CasserolePageState extends State<CasserolePage> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            flexibleSpace: AppBarColorPage(),
+            flexibleSpace: const AppBarColorPage(),
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
@@ -57,8 +57,8 @@ class _CasserolePageState extends State<CasserolePage> {
                 colors: [Color(0xFFBDFF06), Colors.orange],
               ),
             ),
-            child: TabBarView(
-              children: const [
+            child: const TabBarView(
+              children: [
                 CasserolePrepair(),
                 CasseroleIngredients(),
                 CasseroleOthers()

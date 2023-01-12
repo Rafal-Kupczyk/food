@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +25,10 @@ class _BarPageState extends State<BarPage> {
     return Scaffold(
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return HomePage();
+          return const HomePage();
         }
         if (currentIndex == 1) {
-          return RandomPage();
+          return const RandomPage();
         }
         if (currentIndex == 2) {}
         return MyAccountPage(
@@ -36,8 +36,8 @@ class _BarPageState extends State<BarPage> {
         );
       }),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 245, 157, 6),
-        selectedItemColor: Color.fromARGB(255, 248, 19, 3),
+        backgroundColor: const Color.fromARGB(255, 245, 157, 6),
+        selectedItemColor: const Color.fromARGB(255, 248, 19, 3),
 
         currentIndex: currentIndex,
         onTap: (newIndex) {
@@ -71,8 +71,8 @@ class _BarPageState extends State<BarPage> {
             label: 'Moje Konto',
           ),
         ],
-        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500),
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
       ),
     );
   }

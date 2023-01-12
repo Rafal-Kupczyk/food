@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/recipe_card/recipe_card.dart';

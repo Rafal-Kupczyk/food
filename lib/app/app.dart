@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WelcomePage(),
+      home: const WelcomePage(),
     );
   }
 }
@@ -40,11 +39,11 @@ class WelcomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => RootPage(),
+                    builder: (_) => const RootPage(),
                   ),
                 );
               },
-              child: Text('Zaczynamy'),
+              child: const Text('Zaczynamy'),
             )
           ],
         ),

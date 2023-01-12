@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 import 'package:food/App/features/main_screen/recipes/lunch_food/Rolada_page_content/Rolada_others.dart';
@@ -25,7 +23,7 @@ class _RoladaPageState extends State<RoladaPage> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            flexibleSpace: AppBarColorPage(),
+            flexibleSpace: const AppBarColorPage(),
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
@@ -59,12 +57,8 @@ class _RoladaPageState extends State<RoladaPage> {
                 colors: [Color(0xFFBDFF06), Colors.orange],
               ),
             ),
-            child: TabBarView(
-              children: const [
-                RoladaPrepair(),
-                RoladaIngredients(),
-                RoladaOthers()
-              ],
+            child: const TabBarView(
+              children: [RoladaPrepair(), RoladaIngredients(), RoladaOthers()],
             ),
           ),
         ),

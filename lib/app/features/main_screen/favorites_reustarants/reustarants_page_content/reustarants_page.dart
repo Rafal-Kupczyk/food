@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,7 +26,7 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
             );
           }
           if (state.isLoading == true) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
 
           final itemModels = state.documents;
@@ -38,7 +37,7 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
               for (final itemModel in itemModels) ...[
                 Dismissible(
                   key: ValueKey(itemModel.id),
-                  background: DecoratedBox(
+                  background: const DecoratedBox(
                     decoration: BoxDecoration(color: Colors.red),
                     child: Align(
                       alignment: Alignment.centerRight,
@@ -54,20 +53,20 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Czy napewno chcesz usunąc?'),
-                        content: Text('Pózniej nie można tego cofnąć.'),
+                        title: const Text('Czy napewno chcesz usunąc?'),
+                        content: const Text('Pózniej nie można tego cofnąć.'),
                         actions: [
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).pop(true);
                             },
-                            child: Text('TAK'),
+                            child: const Text('TAK'),
                           ),
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).pop(false);
                             },
-                            child: Text('NIE'),
+                            child: const Text('NIE'),
                           ),
                         ],
                       );
@@ -79,15 +78,15 @@ class _ReustarantsPageState extends State<ReustarantsPage> {
                         .deletedocuments(itemModel.id);
                   },
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
-                        colors: const [
+                        colors: [
                           Color.fromARGB(255, 6, 246, 242),
                           Color.fromARGB(255, 243, 224, 14),
                         ],
                       ),
                     ),
-                    margin: EdgeInsets.all(5.0),
+                    margin: const EdgeInsets.all(5.0),
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(

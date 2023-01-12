@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, must_be_immutable
 
 
 import 'package:flutter/material.dart';
@@ -20,23 +19,23 @@ class MyAccountPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(child: Text('Jestes zalogowany jako: $email ')),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           SizedBox(
             height: 50,
             width: 150,
             child: ElevatedButton.icon(
-              icon: Icon(
+              icon: const Icon(
                 Icons.follow_the_signs,
               ),
               onPressed: () {
                 context.read<RootCubit>().signOut();
               },
-              label: Text('Wyloguj sie'),
+              label: const Text('Wyloguj sie'),
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
         ],
       ),
     );

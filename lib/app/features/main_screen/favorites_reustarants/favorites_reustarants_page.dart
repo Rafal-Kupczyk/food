@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,13 +22,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: FavoritesPage(),
+      home: const FavoritesPage(),
     );
   }
 }
 
 class FavoritesPage extends StatefulWidget {
-  FavoritesPage({
+  const FavoritesPage({
     Key? key,
   }) : super(key: key);
 
@@ -43,7 +42,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: AppBarColorPage(),
+        flexibleSpace: const AppBarColorPage(),
         actions: [
           IconButton(
             onPressed: () {
@@ -51,27 +50,27 @@ class _FavoritesPageState extends State<FavoritesPage> {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    content: Text(
+                    content: const Text(
                         'Jeśli chcesz usunać pozycje, przeciągnij w którąs stronę.'),
                     actions: [
                       TextButton(
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
-                        child: Text('OK'),
+                        child: const Text('OK'),
                       ),
                     ],
                   );
                 },
               );
             },
-            icon: Icon(Icons.question_mark),
+            icon: const Icon(Icons.question_mark),
           )
         ],
       ),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return ReustarantsPage();
+          return const ReustarantsPage();
         }
         if (currentIndex == 1) {
           return AddReustarantsPage(onSave: () {
@@ -83,8 +82,8 @@ class _FavoritesPageState extends State<FavoritesPage> {
         throw {};
       }),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 245, 157, 6),
-        selectedItemColor: Color.fromARGB(255, 248, 19, 3),
+        backgroundColor: const Color.fromARGB(255, 245, 157, 6),
+        selectedItemColor: const Color.fromARGB(255, 248, 19, 3),
 
         currentIndex: currentIndex,
         onTap: (newIndex) {
@@ -113,8 +112,8 @@ class _FavoritesPageState extends State<FavoritesPage> {
           ),
         ],
 
-        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500),
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
       ),
     );
   }

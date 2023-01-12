@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
@@ -19,7 +18,7 @@ class RecipesPage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            flexibleSpace: AppBarColorPage(),
+            flexibleSpace: const AppBarColorPage(),
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
@@ -46,8 +45,8 @@ class RecipesPage extends StatelessWidget {
               ],
             ),
           ),
-          body: TabBarView(
-            children: const [
+          body: const TabBarView(
+            children: [
               FastFoodPage(),
               LunchPage(),
               SaladPage(),

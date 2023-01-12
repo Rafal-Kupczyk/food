@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -13,9 +12,9 @@ class CabbageOthers extends StatelessWidget {
           child: Center(
             child: ListView(
               children: [
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Container(
-                  margin: EdgeInsets.all(5.0),
+                  margin: const EdgeInsets.all(5.0),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Row(
@@ -32,7 +31,7 @@ class CabbageOthers extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Text(
+                        const Text(
                           'Trudny',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
@@ -41,9 +40,9 @@ class CabbageOthers extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Container(
-                  margin: EdgeInsets.all(5.0),
+                  margin: const EdgeInsets.all(5.0),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Row(
@@ -58,7 +57,7 @@ class CabbageOthers extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Text(
+                        const Text(
                           '1000 kcal',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
@@ -67,9 +66,9 @@ class CabbageOthers extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Container(
-                  margin: EdgeInsets.all(5.0),
+                  margin: const EdgeInsets.all(5.0),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Row(
@@ -86,7 +85,7 @@ class CabbageOthers extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Text(
+                        const Text(
                           '100 min',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),

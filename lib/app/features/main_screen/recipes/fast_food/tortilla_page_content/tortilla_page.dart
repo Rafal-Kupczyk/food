@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_ingredients.dart';
@@ -22,7 +21,7 @@ class _TortillaPageState extends State<TortillaPage> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            flexibleSpace: AppBarColorPage(),
+            flexibleSpace: const AppBarColorPage(),
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
@@ -56,8 +55,8 @@ class _TortillaPageState extends State<TortillaPage> {
                 colors: [Color(0xFFBDFF06), Colors.orange],
               ),
             ),
-            child: TabBarView(
-              children: const [
+            child: const TabBarView(
+              children: [
                 TortillaPrepair(),
                 TortillaIngredients(),
                 TortillaiOthers()

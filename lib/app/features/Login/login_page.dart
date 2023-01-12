@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors,
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,28 +28,28 @@ class _LoginPageState extends State<LoginPage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            // ignore: prefer_const_literals_to_create_immutables
+           
             children: [
               Text(isCreatingAccount == true
                   ? 'Zarejestruj sie '
                   : 'Zaloguj sie'),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               TextField(
                 controller: widget.emailController,
-                decoration: InputDecoration(hintText: 'E-mail'),
+                decoration: const InputDecoration(hintText: 'E-mail'),
               ),
               TextField(
                 controller: widget.passwordController,
                 obscureText: true,
-                decoration: InputDecoration(hintText: 'Hasło'),
+                decoration: const InputDecoration(hintText: 'Hasło'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(errorMessage),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                     ? 'Zarejestruj sie'
                     : 'Zaloguj sie'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               if (isCreatingAccount == false) ...[
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                       isCreatingAccount = true;
                     });
                   },
-                  child: Text('Utworz konto'),
+                  child: const Text('Utworz konto'),
                 ),
               ],
               if (isCreatingAccount == true) ...[
@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                       isCreatingAccount = false;
                     });
                   },
-                  child: Text('Masz juz konto?'),
+                  child: const Text('Masz juz konto?'),
                 ),
               ],
             ],

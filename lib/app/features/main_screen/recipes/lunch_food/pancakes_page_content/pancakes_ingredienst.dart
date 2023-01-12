@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,24 +13,24 @@ class PancakesIngredients extends StatelessWidget {
           child: Center(
             child: ListView(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text(
                         '200 g mąki pszennej',
                         style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
                       ),
                     ],
@@ -41,17 +40,17 @@ class PancakesIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Text('3 Jajka',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -60,19 +59,19 @@ class PancakesIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text('Szklanka ciepłej wody',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -81,18 +80,18 @@ class PancakesIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Expanded(
                         child: Text('1/2 szklani ciepłego mleka',
                             style: GoogleFonts.prompt(
                               textStyle:
-                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                                  const TextStyle(letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -102,19 +101,19 @@ class PancakesIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text('50 g masła',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -123,19 +122,19 @@ class PancakesIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text(
                         'Cukier',
                         style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
                       ),
                     ],
@@ -145,13 +144,13 @@ class PancakesIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -159,7 +158,7 @@ class PancakesIngredients extends StatelessWidget {
                           '500 g twarogu półtłustego',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -170,13 +169,13 @@ class PancakesIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -184,7 +183,7 @@ class PancakesIngredients extends StatelessWidget {
                           '2 łyżki kwaśnej śmietany 18 % - 30 g',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),

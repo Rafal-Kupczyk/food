@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -25,7 +24,7 @@ class _MakaronowaPageState extends State<MakaronowaPage> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            flexibleSpace: AppBarColorPage(),
+            flexibleSpace: const AppBarColorPage(),
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
@@ -59,8 +58,8 @@ class _MakaronowaPageState extends State<MakaronowaPage> {
                 colors: [Color(0xFFBDFF06), Colors.orange],
               ),
             ),
-            child: TabBarView(
-              children: const [
+            child: const TabBarView(
+              children: [
                 MakaronowaPrepair(),
                 MakaronowaIngredients(),
                 MakaronowaOthers()

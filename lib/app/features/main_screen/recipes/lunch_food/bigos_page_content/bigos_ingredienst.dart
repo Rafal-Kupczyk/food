@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,24 +13,24 @@ class BigosIngredients extends StatelessWidget {
           child: Center(
             child: ListView(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text(
                         '1,5 kg kapusty kiszonej',
                         style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
                       ),
                     ],
@@ -41,17 +40,17 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Text('2 kiełbasy np. śląskie',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -60,19 +59,19 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text('2 duże cebule',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -81,19 +80,19 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Expanded(
                         child: Text(
                             '400 gramów np. szynki lub łopatki wieprzowej',
                             style: GoogleFonts.prompt(
                               textStyle:
-                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                                  const TextStyle(letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -103,19 +102,19 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text('Sól i pieprz',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           )),
                     ],
                   ),
@@ -124,19 +123,19 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text(
                         'Liście laurowe',
                         style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
                       ),
                     ],
@@ -146,13 +145,13 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -160,7 +159,7 @@ class BigosIngredients extends StatelessWidget {
                           'Ziele angielskie',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -171,13 +170,13 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -185,7 +184,7 @@ class BigosIngredients extends StatelessWidget {
                           'Przecier pomidorowy',
                           style: GoogleFonts.prompt(
                             textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
+                                const TextStyle(letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -196,19 +195,19 @@ class BigosIngredients extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Center(
+                      const Center(
                         child: Icon(
                           Icons.brightness_1_rounded,
                           size: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Text(
                         'Przecier pomidorowy',
                         style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
                       ),
                     ],
