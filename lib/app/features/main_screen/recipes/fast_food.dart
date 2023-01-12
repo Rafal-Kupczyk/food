@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/casserole_page_content/caserrole_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/hamburger_page_content/hamburger_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/hotdog_page_content/hotdog_page.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/nuggets_page_content/nuggets_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/pizza_page_content/pizza_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_page.dart';
 
@@ -97,7 +98,13 @@ class _FastFoodPageState extends State<FastFoodPage> {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const NuggetsPage(),
+                ),
+              );
+            },
             child: const RecipeCard(
               title: 'Nuggetsy',
               rating: '4.9',
