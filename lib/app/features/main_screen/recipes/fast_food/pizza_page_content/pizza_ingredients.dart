@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TortillaIngredients extends StatelessWidget {
-  const TortillaIngredients({super.key});
+class PizzaIngredients extends StatelessWidget {
+  const PizzaIngredients({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class TortillaIngredients extends StatelessWidget {
                         width: 20,
                       ),
                       Text(
-                        '300 gram filetu z kurczaka',
+                        '25 g świeżych drożdży (lub 7 g instant)',
                         style: GoogleFonts.prompt(
                           textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
@@ -48,7 +48,7 @@ class TortillaIngredients extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 20),
-                      Text('4 Tortilla wraps',
+                      Text('150 ml ciepłej wody',
                           style: GoogleFonts.prompt(
                             textStyle:
                                 TextStyle(letterSpacing: .1, fontSize: 16),
@@ -69,7 +69,7 @@ class TortillaIngredients extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text('Sałata lodowa',
+                      Text('1/2 łyżeczki cukru',
                           style: GoogleFonts.prompt(
                             textStyle:
                                 TextStyle(letterSpacing: .1, fontSize: 16),
@@ -88,7 +88,7 @@ class TortillaIngredients extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 20),
-                      Text('Czerwona cebula',
+                      Text('250 g mąki pszennej',
                           style: GoogleFonts.prompt(
                             textStyle:
                                 TextStyle(letterSpacing: .1, fontSize: 16),
@@ -109,7 +109,7 @@ class TortillaIngredients extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text('Pomidor',
+                      Text('1 łyżeczka soli',
                           style: GoogleFonts.prompt(
                             textStyle:
                                 TextStyle(letterSpacing: .1, fontSize: 16),
@@ -130,11 +130,12 @@ class TortillaIngredients extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text('Papryka',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Text(
+                        '1 łyżka oliwy',
+                        style: GoogleFonts.prompt(
+                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -151,74 +152,17 @@ class TortillaIngredients extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text('Ser żółty',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text(
+                            'Dotatki: ser, czerwona cebula, szynka itp + sos czosnkowy/ostry',
+                            style: GoogleFonts.prompt(
+                              textStyle:
+                                  TextStyle(letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Center(
-                        child: Icon(
-                          Icons.brightness_1_rounded,
-                          size: 20,
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Text('Przyprawa do kurczaka',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Center(
-                        child: Icon(
-                          Icons.brightness_1_rounded,
-                          size: 20,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text('Sos czosnkowy/ostry',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Center(
-                        child: Icon(
-                          Icons.brightness_1_rounded,
-                          size: 20,
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Text('Olej do smażenia',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 30),
               ],
             ),
           ),

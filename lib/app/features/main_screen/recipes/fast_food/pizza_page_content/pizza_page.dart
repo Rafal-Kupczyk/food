@@ -1,19 +1,18 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_ingredients.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_others.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_prepair.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/pizza_page_content/pizza_ingredients.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/pizza_page_content/pizza_others.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/pizza_page_content/pizza_prepair.dart';
+
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
-class TortillaPage extends StatefulWidget {
-  const TortillaPage({super.key});
+class PizzaPage extends StatefulWidget {
+  const PizzaPage({super.key});
 
   @override
-  State<TortillaPage> createState() => _TortillaPageState();
+  State<PizzaPage> createState() => _PizzaPageState();
 }
 
-class _TortillaPageState extends State<TortillaPage> {
+class _PizzaPageState extends State<PizzaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +21,7 @@ class _TortillaPageState extends State<TortillaPage> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            flexibleSpace: AppBarColorPage(),
+            flexibleSpace: const AppBarColorPage(),
             bottom: const TabBar(
               labelColor: Color.fromARGB(255, 0, 0, 0),
               unselectedLabelColor: Colors.white,
@@ -43,7 +42,7 @@ class _TortillaPageState extends State<TortillaPage> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                Text('Tortilla'),
+                Text('Pizza'),
                 SizedBox(width: 15),
               ],
             ),
@@ -56,12 +55,8 @@ class _TortillaPageState extends State<TortillaPage> {
                 colors: [Color(0xFFBDFF06), Colors.orange],
               ),
             ),
-            child: TabBarView(
-              children: const [
-                TortillaiPrepair(),
-                TortillaIngredients(),
-                TortillaiOthers()
-              ],
+            child: const TabBarView(
+              children: [PizzaPrepair(), PizzaIngredients(), PizzaOthers()],
             ),
           ),
         ),
