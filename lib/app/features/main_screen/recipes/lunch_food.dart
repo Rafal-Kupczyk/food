@@ -5,6 +5,7 @@ import 'package:food/App/features/main_screen/recipes/lunch_food/cabbage_soup_pa
 import 'package:food/App/features/main_screen/recipes/lunch_food/fish_page_content/fish_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/pancakes_page_content/pancakes_page.dart';
+import 'package:food/App/features/main_screen/recipes/lunch_food/pierogi_page_content/pierogi_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/rolada_page_content/rolada_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/schabowy_page_content/schabowy_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/spagetti_page_content/spagetti_page.dart';
@@ -165,6 +166,21 @@ class _LunchPageState extends State<LunchPage> {
               cookTime: '30 min',
               thumbnailUrl:
                   'https://staticsmaker.iplsc.com/smaker_prod_2017_11_28/01ffff7a425adfb6b5d3e5cbb5fadc40-lg.jpg',
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const PierogiPage(),
+                ),
+              );
+            },
+            child: const RecipeCard(
+              title: 'Pierogi ruskie',
+              rating: '4.0',
+              cookTime: '60 min',
+              thumbnailUrl: 'https://pliki.doradcasmaku.pl/pierogi-ruskie233-4',
             ),
           ),
         ],
