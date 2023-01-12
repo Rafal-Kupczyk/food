@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/fish_page_content/fish_page.dart';
+import 'package:food/App/features/main_screen/recipes/lunch_food/schabowy_page_content/schabowy_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/spagetti_page_content/spagetti_page.dart';
 import 'package:food/App/features/main_screen/recipes/recipe_card/recipe_card.dart';
 
@@ -46,6 +47,22 @@ class _LunchPageState extends State<LunchPage> {
               cookTime: '25 min',
               thumbnailUrl:
                   'https://bi.im-g.pl/im/6c/48/17/z24413804IER,Losos-z-piekarnika.jpg',
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const SchabowyPage(),
+                ),
+              );
+            },
+            child: const RecipeCard(
+              title: 'Schabowy',
+              rating: '4.7',
+              cookTime: '30 min',
+              thumbnailUrl:
+                  'https://staticsmaker.iplsc.com/smaker_prod_2019_05_29/710772584c50e61e096e61deee7b0d4d-lg.jpg',
             ),
           ),
         ],
