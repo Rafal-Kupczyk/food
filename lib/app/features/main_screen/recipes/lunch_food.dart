@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/fish_page_content/fish_page.dart';
+import 'package:food/App/features/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/schabowy_page_content/schabowy_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/spagetti_page_content/spagetti_page.dart';
 import 'package:food/App/features/main_screen/recipes/recipe_card/recipe_card.dart';
@@ -63,6 +64,22 @@ class _LunchPageState extends State<LunchPage> {
               cookTime: '30 min',
               thumbnailUrl:
                   'https://staticsmaker.iplsc.com/smaker_prod_2019_05_29/710772584c50e61e096e61deee7b0d4d-lg.jpg',
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const KotletPage(),
+                ),
+              );
+            },
+            child: const RecipeCard(
+              title: 'Kotlet z piersi',
+              rating: '4.7',
+              cookTime: '30 min',
+              thumbnailUrl:
+                  'https://staticsmaker.iplsc.com/smaker_prod_2019_10_18/678894d8dc03e74681b3803659ea6126-lg.jpg',
             ),
           ),
         ],

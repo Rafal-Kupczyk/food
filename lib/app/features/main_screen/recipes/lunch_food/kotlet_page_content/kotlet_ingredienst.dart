@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SchabowyIngredients extends StatelessWidget {
-  const SchabowyIngredients({super.key});
+class KotletIngredients extends StatelessWidget {
+  const KotletIngredients({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class SchabowyIngredients extends StatelessWidget {
                         width: 20,
                       ),
                       Text(
-                        '600 g schabu bez kości',
+                        '600 g pierśi z kurczaka',
                         style: GoogleFonts.prompt(
                           textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
                         ),
@@ -109,12 +109,11 @@ class SchabowyIngredients extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        'Olej lub masło',
-                        style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
-                        ),
-                      ),
+                      Text('Olej lub masło',
+                          style: GoogleFonts.prompt(
+                            textStyle:
+                                TextStyle(letterSpacing: .1, fontSize: 16),
+                          )),
                     ],
                   ),
                 ),
@@ -131,12 +130,11 @@ class SchabowyIngredients extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        'Pieprz i sól',
-                        style: GoogleFonts.prompt(
-                          textStyle: TextStyle(letterSpacing: .1, fontSize: 16),
-                        ),
-                      ),
+                      Text('Przyprawa do mięs',
+                          style: GoogleFonts.prompt(
+                            textStyle:
+                                TextStyle(letterSpacing: .1, fontSize: 16),
+                          )),
                     ],
                   ),
                 ),
