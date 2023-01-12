@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/App/features/main_screen/recipes/lunch_food/cabbage_soup_page_content/cabbage_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/fish_page_content/fish_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/rolada_page_content/rolada_page.dart';
@@ -97,6 +98,22 @@ class _LunchPageState extends State<LunchPage> {
               cookTime: '60 min',
               thumbnailUrl:
                   'https://www.przyslijprzepis.pl/media/cache/default_view/uploads/media/recipe/0001/44/34a8688b932b945a7e3d75d4d8bcca6ca794b5ba.jpeg',
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const CabbagePage(),
+                ),
+              );
+            },
+            child: const RecipeCard(
+              title: 'Kapuśniak',
+              rating: '5.0',
+              cookTime: '90 min',
+              thumbnailUrl:
+                  'https://bi.im-g.pl/im/9f/79/17/z24616607AMP,Kapusniak-z-kiszonej-kapusty-jest-jedna-z-bardziej.jpg',
             ),
           ),
         ],
