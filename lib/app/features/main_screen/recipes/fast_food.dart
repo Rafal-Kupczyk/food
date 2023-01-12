@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/casserole_page_content/caserrole_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/hamburger_page_content/hamburger_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/hotdog_page_content/hotdog_page.dart';
 import 'package:food/App/features/main_screen/recipes/fast_food/pizza_page_content/pizza_page.dart';
@@ -74,17 +75,23 @@ class _FastFoodPageState extends State<FastFoodPage> {
             child: const RecipeCard(
               title: 'Pizza',
               rating: '5.0',
-              cookTime: '60 min',
+              cookTime: '80 min',
               thumbnailUrl:
                   'https://obiaddlataty.pl/wp-content/uploads/2020/02/domowa_pizza-scaled.jpg',
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const CasserolePage(),
+                ),
+              );
+            },
             child: const RecipeCard(
               title: 'Zapiekanka',
               rating: '3.5',
-              cookTime: '15 min',
+              cookTime: '20 min',
               thumbnailUrl:
                   'https://pliki.doradcasmaku.pl/zapiekanka-domowa0-4',
             ),

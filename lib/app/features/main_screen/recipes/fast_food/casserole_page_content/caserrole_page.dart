@@ -1,19 +1,20 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_ingredients.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_others.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/tortilla_page_content/tortilla_prepair.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/casserole_page_content/casserole_ingredients.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/casserole_page_content/casserole_others.dart';
+import 'package:food/App/features/main_screen/recipes/fast_food/casserole_page_content/casserole_prepair.dart';
+
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
-class TortillaPage extends StatefulWidget {
-  const TortillaPage({super.key});
+class CasserolePage extends StatefulWidget {
+  const CasserolePage({super.key});
 
   @override
-  State<TortillaPage> createState() => _TortillaPageState();
+  State<CasserolePage> createState() => _CasserolePageState();
 }
 
-class _TortillaPageState extends State<TortillaPage> {
+class _CasserolePageState extends State<CasserolePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +44,7 @@ class _TortillaPageState extends State<TortillaPage> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                Text('Tortilla'),
+                Text('Zapiekanka'),
                 SizedBox(width: 15),
               ],
             ),
@@ -58,9 +59,9 @@ class _TortillaPageState extends State<TortillaPage> {
             ),
             child: TabBarView(
               children: const [
-                TortillaPrepair(),
-                TortillaIngredients(),
-                TortillaiOthers()
+                CasserolePrepair(),
+                CasseroleIngredients(),
+                CasseroleOthers()
               ],
             ),
           ),

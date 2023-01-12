@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class TortillaiPrepair extends StatelessWidget {
-  const TortillaiPrepair({super.key});
+class TortillaPrepair extends StatelessWidget {
+  const TortillaPrepair({super.key});
 
   @override
   Widget build(BuildContext context) {
