@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class CabbageOthers extends StatelessWidget {
-  const CabbageOthers({super.key});
+class BograczOthers extends StatelessWidget {
+  const BograczOthers({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +87,7 @@ class CabbageOthers extends StatelessWidget {
                           ],
                         ),
                         Text(
-                          '100 min',
+                          '180 min',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),

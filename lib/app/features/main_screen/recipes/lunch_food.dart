@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/bigos_page_content/bigos_page.dart';
+import 'package:food/App/features/main_screen/recipes/lunch_food/bogracz_page_content/bogracz_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/cabbage_soup_page_content/cabbage_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/fish_page_content/fish_page.dart';
 import 'package:food/App/features/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_page.dart';
@@ -112,7 +113,7 @@ class _LunchPageState extends State<LunchPage> {
             child: const RecipeCard(
               title: 'Kapuśniak',
               rating: '5.0',
-              cookTime: '90 min',
+              cookTime: '100 min',
               thumbnailUrl:
                   'https://bi.im-g.pl/im/9f/79/17/z24616607AMP,Kapusniak-z-kiszonej-kapusty-jest-jedna-z-bardziej.jpg',
             ),
@@ -128,9 +129,25 @@ class _LunchPageState extends State<LunchPage> {
             child: const RecipeCard(
               title: 'Bigos',
               rating: '5.0',
-              cookTime: '90 min',
+              cookTime: '180 min',
               thumbnailUrl:
                   'http://foodo.pl/wp-content/uploads/2014/09/bigos.jpg',
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const BograczPage(),
+                ),
+              );
+            },
+            child: const RecipeCard(
+              title: 'Bogracz',
+              rating: '5.0',
+              cookTime: '180 min',
+              thumbnailUrl:
+                  'https://cdn.katalogsmakow.pl/2017/12/07/0x600/bogracz.666801.jpg',
             ),
           ),
         ],

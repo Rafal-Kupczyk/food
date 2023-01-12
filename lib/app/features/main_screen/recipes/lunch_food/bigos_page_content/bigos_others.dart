@@ -87,7 +87,7 @@ class BigosOthers extends StatelessWidget {
                           ],
                         ),
                         Text(
-                          '120 min',
+                          '180 min',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
