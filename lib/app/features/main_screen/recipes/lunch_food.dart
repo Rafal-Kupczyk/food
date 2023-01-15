@@ -180,7 +180,8 @@ class _LunchPageState extends State<LunchPage> {
               title: 'Pierogi ruskie',
               rating: '4.0',
               cookTime: '60 min',
-              thumbnailUrl: 'https://pliki.doradcasmaku.pl/pierogi-ruskie233-4',
+              thumbnailUrl:
+                  'https://staticsmaker.iplsc.com/smaker_prod_2021_11_07/be7f440097a21d06ff7e5edc14bbae4d-content.jpg',
             ),
           ),
         ],

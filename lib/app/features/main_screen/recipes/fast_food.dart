@@ -94,15 +94,15 @@ class _FastFoodPageState extends State<FastFoodPage> {
               rating: '3.5',
               cookTime: '20 min',
               thumbnailUrl:
-                  'https://pliki.doradcasmaku.pl/zapiekanka-domowa0-4',
+                  'https://www.196flavors.com/wp-content/uploads/2022/08/Zapiekanka-FP.jpg',
             ),
           ),
-         InkWell(
+          InkWell(
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => const NuggetsPage(),
-                ), 
+                ),
               );
             },
             child: const RecipeCard(
@@ -110,7 +110,7 @@ class _FastFoodPageState extends State<FastFoodPage> {
               rating: '3.5',
               cookTime: '30 min',
               thumbnailUrl:
-                  'https://s3.przepisy.pl/przepisy3ii/img/variants/1280x0/nuggets7104311650895847000.jpg',
+                  'https://www.mojegotowanie.pl/media/cache/big/uploads/media/default/0001/92/nuggetsy.jpeg',
             ),
           ),
         ],
