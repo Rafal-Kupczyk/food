@@ -30,11 +30,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ShoppingListPage extends StatelessWidget {
-  ShoppingListPage({
+class ShoppingListPage extends StatefulWidget {
+  const ShoppingListPage({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<ShoppingListPage> createState() => _ShoppingListPageState();
+}
+
+class _ShoppingListPageState extends State<ShoppingListPage> {
   final controller = TextEditingController();
 
   @override
@@ -80,16 +85,9 @@ class ShoppingListPage extends StatelessWidget {
           },
         ),
         body: BlocBuilder<ShoppingListCubit, ShoppingListState>(
-          builder: (context, state) {
+          builder: (context, state) 
             {
-              if (state.errorMessage.isNotEmpty) {
-                return const Text('Wystapil nieoczekiwany problem');
-              }
-
-              if (state.isLoading == true) {
-                return const Text('Prosze czekac,trwa ladowanie danych');
-              }
-
+             
               final shopingModels = state.documents;
 
               return ListView(
@@ -145,7 +143,7 @@ class ShoppingListPage extends StatelessWidget {
                 ],
               );
             }
-          },
+          
         ),
       ),
     );

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food/App/cubit/root_cubit.dart';
@@ -30,24 +29,31 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const RootPage(),
-                  ),
-                );
-              },
-              child: const Text('Zaczynamy'),
-            )
-          ],
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/firstpage.png'),
+            fit: BoxFit.cover,
+          ),
         ),
-      )),
+        child: SafeArea(
+          child: Center(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const RootPage(),
+                    ),
+                  );
+                },
+                child: const Text('Zaczynamy'),
+              )
+            ]),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -2,15 +2,15 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:food/repositories/shoping_repository.dart';
+
 import 'package:food/models/shoping_model.dart';
-
-import 'package:meta/meta.dart';
-
 part 'shopping_list_state.dart';
 
 class ShoppingListCubit extends Cubit<ShoppingListState> {
   String? id;
-  ShoppingListCubit()
+  ShoppingListCubit(this._shopingRepository)
       : super(
           const ShoppingListState(
             documents: [],
@@ -19,14 +19,33 @@ class ShoppingListCubit extends Cubit<ShoppingListState> {
           ),
         );
 
+  final ShopingRepository _shopingRepository;
+
   StreamSubscription? _streamSubscription;
 
   Future<void> deletedocuments(String id) async {
-    FirebaseFirestore.instance.collection('categories').doc(id).delete();
+    final userID = FirebaseAuth.instance.currentUser?.uid;
+    if (userID == null) {
+      throw Exception('Nie jesteś zalogowany');
+    }
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(userID)
+        .collection('categories')
+        .doc(id)
+        .delete();
   }
 
   Future<void> getdocuments(String text) async {
-    FirebaseFirestore.instance.collection('categories').add({'title': text});
+    final userID = FirebaseAuth.instance.currentUser?.uid;
+    if (userID == null) {
+      throw Exception('Nie jesteś zalogowany');
+    }
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(userID)
+        .collection('categories')
+        .add({'title': text});
   }
 
   Future<void> start() async {
@@ -37,8 +56,13 @@ class ShoppingListCubit extends Cubit<ShoppingListState> {
         isLoading: true,
       ),
     );
-
+    final userID = FirebaseAuth.instance.currentUser?.uid;
+    if (userID == null) {
+      throw Exception('Nie jesteś zalogowany');
+    }
     _streamSubscription = FirebaseFirestore.instance
+        .collection('users')
+        .doc(userID)
         .collection('categories')
         .snapshots()
         .listen((items) {
