@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/bogracz_page_content/bogracz_page.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/bogracz_page_content/bogracz_page.dart';
 
 class TextButtonBogracz extends StatelessWidget {
   const TextButtonBogracz({

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_page.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_page.dart';
+
 
 class TextButtonKotlet extends StatelessWidget {
   const TextButtonKotlet({

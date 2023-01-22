@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/nuggets_page_content/nuggets_page.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/nuggets_page_content/nuggets_page.dart';
+
 
 class TextButtonNuggets extends StatelessWidget {
   const TextButtonNuggets({

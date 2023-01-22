@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:food/App/features/main_screen/recipes/lunch_food/bigos_page_content/bigos_page.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/bigos_page_content/bigos_page.dart';
 
 class TextButtonBigos extends StatelessWidget {
   const TextButtonBigos({
