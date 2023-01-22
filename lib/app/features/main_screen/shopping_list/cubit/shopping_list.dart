@@ -1,11 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 import 'package:food/app/features/main_screen/shopping_list/category_widget.dart';
-import 'package:food/config.dart';
+
 import 'package:food/firebase_options.dart';
 
 import 'package:food/app/features/main_screen/shopping_list/cubit/cubit/cubit/shopping_list_cubit.dart';
@@ -15,21 +13,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: Config.debugShowCheckedModeBanner,
-      title: 'Flutter Demo',
-      theme: ThemeData(),
-      home: ShoppingListPage(),
-    );
-  }
 }
 
 class ShoppingListPage extends StatefulWidget {
@@ -52,28 +35,28 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text('Lista zakupow'),
-          flexibleSpace: AppBarColorPage(),
+          flexibleSpace: const AppBarColorPage(),
         ),
         floatingActionButton: BlocBuilder<ShoppingListCubit, ShoppingListState>(
           builder: (context, state) {
             return Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomCenter,
-                  stops: const [
+                  stops: [
                     0.3,
                     1.2,
                   ],
-                  colors: const [
+                  colors: [
                     Color.fromARGB(255, 8, 240, 248),
                     Color.fromARGB(223, 12, 68, 222)
                   ],
                 ),
               ),
               child: FloatingActionButton(
-                backgroundColor: Color.fromARGB(0, 255, 23, 23),
+                backgroundColor: const Color.fromARGB(0, 255, 23, 23),
                 elevation: 0,
                 onPressed: () {
                   context
@@ -121,7 +104,7 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
                 ),
               ],
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Wpisz produkt ',
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
@@ -132,8 +115,8 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
                 ),
                 controller: controller,
               ),
-              SizedBox(height: 30),
-              Center(
+              const SizedBox(height: 30),
+              const Center(
                 child: Text(
                   "Aby usunąc przeciągnij w lewo",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
