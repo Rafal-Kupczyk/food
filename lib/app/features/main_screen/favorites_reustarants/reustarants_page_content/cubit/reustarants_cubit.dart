@@ -12,7 +12,7 @@ part 'reustarants_state.dart';
 class ReustarantsPageCubit extends Cubit<ReustarantsPageState> {
   String? id;
 
-  ReustarantsPageCubit(this._itemsRepository)
+  ReustarantsPageCubit(this._itemsRepository, )
       : super(const ReustarantsPageState(
           documents: [],
           errorMessage: '',

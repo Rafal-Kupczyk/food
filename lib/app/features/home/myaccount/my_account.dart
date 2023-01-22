@@ -12,31 +12,29 @@ class MyAccountPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(child: Text('Jestes zalogowany jako: $email ')),
-            const SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-              height: 50,
-              width: 150,
-              child: ElevatedButton.icon(
-                icon: const Icon(
-                  Icons.follow_the_signs,
-                ),
-                onPressed: () {
-                  context.read<RootCubit>().signOut();
-                },
-                label: const Text('Wyloguj sie'),
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(child: Text('Jestes zalogowany jako: $email ')),
+          const SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            height: 50,
+            width: 150,
+            child: ElevatedButton.icon(
+              icon: const Icon(
+                Icons.follow_the_signs,
               ),
+              onPressed: () {
+                context.read<RootCubit>().signOut();
+              },
+              label: const Text('Wyloguj sie'),
             ),
-            const SizedBox(height: 30),
-          ],
-        ),
+          ),
+          const SizedBox(height: 30),
+        ],
       ),
     );
   }

@@ -6,7 +6,8 @@ import 'package:food/config.dart';
 import 'firebase_options.dart';
 
 void main() async {
-  Config.appFlavor = Flavor.development;
+  Config.appFlavor = Flavor.production;
+
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

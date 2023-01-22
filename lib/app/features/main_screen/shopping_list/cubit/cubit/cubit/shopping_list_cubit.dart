@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:food/repositories/shoping_repository.dart';
+
 
 import 'package:food/models/shoping_model.dart';
 part 'shopping_list_state.dart';
 
 class ShoppingListCubit extends Cubit<ShoppingListState> {
   String? id;
-  ShoppingListCubit(this._shopingRepository)
+  ShoppingListCubit()
       : super(
           const ShoppingListState(
             documents: [],
@@ -19,7 +19,7 @@ class ShoppingListCubit extends Cubit<ShoppingListState> {
           ),
         );
 
-  final ShopingRepository _shopingRepository;
+
 
   StreamSubscription? _streamSubscription;
 

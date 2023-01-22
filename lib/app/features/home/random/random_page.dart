@@ -9,39 +9,37 @@ class RandomPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Napewno cos dobrego :)'),
-          centerTitle: true,
-          flexibleSpace: const AppBarColorPage(),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'Sprawdzmy co dzisiaj zjemy',
-                style: TextStyle(fontSize: 25),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Napewno cos dobrego :)'),
+        centerTitle: true,
+        flexibleSpace: const AppBarColorPage(),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Sprawdzmy co dzisiaj zjemy',
+              style: TextStyle(fontSize: 25),
+            ),
+            const SizedBox(height: 40),
+            SizedBox(
+              width: 250,
+              height: 50,
+              child: ElevatedButton.icon(
+                icon: const Icon(Icons.verified),
+                label: const Text('Sprawdz'),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const DrawPage(),
+                    ),
+                  );
+                },
               ),
-              const SizedBox(height: 40),
-              SizedBox(
-                width: 250,
-                height: 50,
-                child: ElevatedButton.icon(
-                  icon: const Icon(Icons.verified),
-                  label: const Text('Sprawdz'),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => const DrawPage(),
-                      ),
-                    );
-                  },
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );

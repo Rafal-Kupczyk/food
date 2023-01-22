@@ -6,10 +6,14 @@ import 'package:food/App/homepage/home_page.dart';
 import 'package:food/App/features/home/myaccount/my_account.dart';
 import 'package:food/App/features/home/random/random_page.dart';
 
+
 class BarPage extends StatefulWidget {
+  
   const BarPage({
+  
     Key? key,
     required this.user,
+    
   }) : super(key: key);
 
   final User user;

@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 import 'package:food/app/features/main_screen/shopping_list/category_widget.dart';
+import 'package:food/config.dart';
 import 'package:food/firebase_options.dart';
 
 import 'package:food/app/features/main_screen/shopping_list/cubit/cubit/cubit/shopping_list_cubit.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: Config.debugShowCheckedModeBanner,
       title: 'Flutter Demo',
       theme: ThemeData(),
       home: ShoppingListPage(),
@@ -85,66 +87,61 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
           },
         ),
         body: BlocBuilder<ShoppingListCubit, ShoppingListState>(
-          builder: (context, state) 
-            {
-             
-              final shopingModels = state.documents;
+            builder: (context, state) {
+          final shopingModels = state.documents;
 
-              return ListView(
-                children: [
-                  for (final shopingModel in shopingModels) ...[
-                    Dismissible(
-                      key: ValueKey(shopingModel.id),
-                      background: const DecoratedBox(
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                        ),
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: Padding(
-                            padding: EdgeInsets.only(right: 32.0),
-                            child: Icon(
-                              Icons.delete,
-                            ),
-                          ),
-                        ),
-                      ),
-                      confirmDismiss: (direction) async {
-                        return direction == DismissDirection.endToStart;
-                      },
-                      onDismissed: (_) {
-                        context
-                            .read<ShoppingListCubit>()
-                            .deletedocuments(shopingModel.id);
-                      },
-                      child: CategoryWidget(shopingModel.title),
+          return ListView(
+            children: [
+              for (final shopingModel in shopingModels) ...[
+                Dismissible(
+                  key: ValueKey(shopingModel.id),
+                  background: const DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: Colors.red,
                     ),
-                  ],
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Wpisz produkt ',
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color.fromARGB(255, 3, 255, 66),
-                          width: 1.0,
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 32.0),
+                        child: Icon(
+                          Icons.delete,
                         ),
                       ),
                     ),
-                    controller: controller,
                   ),
-                  SizedBox(height: 30),
-                  Center(
-                    child: Text(
-                      "Aby usunąc przeciągnij w lewo",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  confirmDismiss: (direction) async {
+                    return direction == DismissDirection.endToStart;
+                  },
+                  onDismissed: (_) {
+                    context
+                        .read<ShoppingListCubit>()
+                        .deletedocuments(shopingModel.id);
+                  },
+                  child: CategoryWidget(shopingModel.title),
+                ),
+              ],
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Wpisz produkt ',
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 3, 255, 66),
+                      width: 1.0,
                     ),
-                  )
-                ],
-              );
-            }
-          
-        ),
+                  ),
+                ),
+                controller: controller,
+              ),
+              SizedBox(height: 30),
+              Center(
+                child: Text(
+                  "Aby usunąc przeciągnij w lewo",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              )
+            ],
+          );
+        }),
       ),
     );
   }

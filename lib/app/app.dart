@@ -5,6 +5,7 @@ import 'package:food/App/cubit/root_cubit.dart';
 import 'package:food/App/features/Login/login_page.dart';
 
 import 'package:food/App/features/home/bottomnavigationbar_page.dart';
+import 'package:food/config.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: Config.debugShowCheckedModeBanner,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
