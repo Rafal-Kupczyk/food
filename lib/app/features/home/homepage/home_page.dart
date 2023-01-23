@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/favorites_reustarants/favorites_reustarants_page.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/recipes_page.dart';
 import 'package:food/App/features/home/homepage/main_screen/shopping_list/cubit/shopping_list.dart';
+import 'package:food/App/features/home/homepage/main_screen/weather/weather.dart';
 import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
 
 class HomePage extends StatefulWidget {
@@ -233,7 +234,7 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => const ShoppingListPage(),
+                          builder: (_) => const WeatherPage(),
                         ),
                       );
                     },
