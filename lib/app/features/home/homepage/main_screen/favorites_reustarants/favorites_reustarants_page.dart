@@ -4,7 +4,6 @@ import 'package:food/App/features/home/homepage/main_screen/favorites_reustarant
 import 'package:food/App/features/home/homepage/main_screen/favorites_reustarants/reustarants_page_content/reustarants_page.dart';
 import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
 
-import 'package:food/config.dart';
 import 'package:food/firebase_options.dart';
 
 void main() async {
@@ -12,21 +11,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: Config.debugShowCheckedModeBanner,
-      title: 'Flutter Demo',
-      theme: ThemeData(),
-      home: const FavoritesPage(),
-    );
-  }
 }
 
 class FavoritesPage extends StatefulWidget {
@@ -96,7 +80,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
           });
         },
 
-        // ignore: prefer_const_literals_to_create_immutables
+     
         items: [
           BottomNavigationBarItem(
             icon: Icon(
