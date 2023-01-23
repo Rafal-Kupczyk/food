@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/fast_food/HotDog_page_content/HotDog_page.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/hotdog_page_content/hotdog_page.dart';
 
 class TextButtonHotDog extends StatelessWidget {
   const TextButtonHotDog({

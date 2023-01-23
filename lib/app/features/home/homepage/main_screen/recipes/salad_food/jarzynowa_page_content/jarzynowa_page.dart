@@ -1,9 +1,10 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/salad_food/jarzynowa_page_content/jarzynowa_others.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/salad_food/jarzynowa_page_content/jarzynowa_prepairs.dart';
 
-import 'package:food/App/features/main_screen/recipes/salad_food/Jarzynowa_page_content/Jarzynowa_others.dart';
-import 'package:food/App/features/main_screen/recipes/salad_food/Jarzynowa_page_content/Jarzynowa_prepairs.dart';
+
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 

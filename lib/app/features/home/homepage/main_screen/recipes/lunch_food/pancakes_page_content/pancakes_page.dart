@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Pancakes_page_content/Pancakes_ingredienst.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Pancakes_page_content/Pancakes_others.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Pancakes_page_content/Pancakes_prepairs.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pancakes_page_content/pancakes_ingredienst.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pancakes_page_content/pancakes_others.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pancakes_page_content/pancakes_prepairs.dart';
+
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 

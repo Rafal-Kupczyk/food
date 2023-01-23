@@ -4,9 +4,6 @@ import 'package:food/App/features/home/homepage/main_screen/recipes/recipes_page
 import 'package:food/App/features/home/homepage/main_screen/shopping_list/cubit/shopping_list.dart';
 import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
 
-
-
-
 class HomePage extends StatefulWidget {
   const HomePage({
     Key? key,
@@ -87,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               SizedBox(
                 width: 300,
                 height: 50,
@@ -144,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               SizedBox(
                 width: 300,
                 height: 50,
@@ -185,6 +182,63 @@ class _HomePageState extends State<HomePage> {
                     },
                     label: Text(
                       'Lista zakupow',
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        shadows: [
+                          for (double i = 10; i < (isPressed ? 8 : 4); i++)
+                            Shadow(
+                              color: shadowColor,
+                              blurRadius: 1 * i,
+                            ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30),
+              SizedBox(
+                width: 300,
+                height: 50,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 46, 255, 252),
+                        Color.fromARGB(255, 3, 255, 83),
+                      ],
+                    ),
+                  ),
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(0, 232, 20, 20),
+                      shadowColor: const Color.fromARGB(255, 95, 195, 242),
+                      elevation: 10,
+                      shape: const RoundedRectangleBorder(
+                        side: BorderSide(
+                          color: Color.fromARGB(255, 236, 168, 9),
+                          width: 1.5,
+                        ),
+                      ),
+                    ),
+                    icon: const Icon(
+                      Icons.auto_stories,
+                      color: Color.fromARGB(255, 248, 248, 1),
+                    ),
+                    onHover: (hovered) => setState(() {
+                      isPressed = hovered;
+                    }),
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const ShoppingListPage(),
+                        ),
+                      );
+                    },
+                    label: Text(
+                      'Pogoda',
                       style: TextStyle(
                         color: const Color.fromARGB(255, 255, 255, 255),
                         fontWeight: FontWeight.bold,

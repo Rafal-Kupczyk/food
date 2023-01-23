@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:food/App/features/home/homepage/main_screen/shopping_list/category_widget.dart';
 import 'package:food/App/features/home/homepage/main_screen/shopping_list/cubit/shopping_list_cubit.dart';
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
-import 'package:food/app/features/main_screen/shopping_list/category_widget.dart';
 
 import 'package:food/firebase_options.dart';
 

@@ -1,10 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_ingredienst.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_prepairs.dart';
-
-import 'package:food/App/features/main_screen/recipes/lunch_food/Kotlet_page_content/Kotlet_others.dart';
-
-import 'package:food/App/features/main_screen/recipes/lunch_food/Kotlet_page_content/Kotlet_ingredienst.dart';
 
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Schabowy_page_content/Schabowy_page.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/schabowy_page_content/schabowy_page.dart';
 
 class TextButtonSchabowy extends StatelessWidget {
   const TextButtonSchabowy({

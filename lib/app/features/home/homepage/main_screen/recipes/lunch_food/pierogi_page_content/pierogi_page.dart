@@ -1,9 +1,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Pierogi_page_content/Pierogi_ingredienst.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Pierogi_page_content/Pierogi_others.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Pierogi_page_content/Pierogi_prepairs.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pierogi_page_content/pierogi_ingredienst.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pierogi_page_content/pierogi_others.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pierogi_page_content/pierogi_prepairs.dart';
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 

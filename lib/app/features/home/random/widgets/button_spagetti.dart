@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Spagetti_page_content/Spagetti_page.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/spagetti_page_content/spagetti_page.dart';
 
 class TextButtonSpagetti extends StatelessWidget {
   const TextButtonSpagetti({

@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/schabowy_page_content/schabowy_ingredienst.dart';
-
-import 'package:food/App/features/main_screen/recipes/lunch_food/Schabowy_page_content/Schabowy_others.dart';
-import 'package:food/App/features/main_screen/recipes/lunch_food/Schabowy_page_content/Schabowy_prepairs.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/schabowy_page_content/schabowy_others.dart';
+import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/schabowy_page_content/schabowy_prepairs.dart';
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
