@@ -1,9 +1,23 @@
+import 'package:food/data/remote_data_sources/weather_remote_data_sources.dart';
 import 'package:food/models/weather_model.dart';
 
 class WeatherRepository {
+  WeatherRepository(this._weatherRemoteDataSources);
+
+  final WeatherRemoteDataSources _weatherRemoteDataSources;
+
   Future<WeatherModel?> getWeatherModel({
     required String city,
   }) async {
-    return const WeatherModel(city: 'Warsaw', temperature: -5.5);
+    final responseData = await _weatherRemoteDataSources.getWeatherData(
+      city: city,
+    );
+    if (responseData == null) {
+      return null;
+    }
+    final name = responseData['location']['name'] as String;
+    final temperature = (responseData['current']['temp_c'] + 0.0) as double;
+
+    return WeatherModel(city: name, temperature: temperature);
   }
 }

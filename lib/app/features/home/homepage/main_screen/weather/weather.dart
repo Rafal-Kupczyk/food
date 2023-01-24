@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food/App/core/enums.dart';
 import 'package:food/App/features/home/homepage/main_screen/weather/cubit/weather_cubit.dart';
+import 'package:food/data/remote_data_sources/weather_remote_data_sources.dart';
 import 'package:food/models/weather_model.dart';
 import 'package:food/repositories/weather_repository.dart';
 
@@ -14,7 +15,7 @@ class WeatherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => WeatherCubit(
-        WeatherRepository(),
+        WeatherRepository(WeatherRemoteDataSources()),
       ),
       child: BlocListener<WeatherCubit, WeatherState>(
         listener: (context, state) {
