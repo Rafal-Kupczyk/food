@@ -1,16 +1,26 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food/App/core/enums.dart';
 import 'package:food/App/features/home/homepage/main_screen/weather/cubit/weather_cubit.dart';
+import 'package:food/App/features/home/homepage/main_screen/weather/widgets/display_weather.dart';
+import 'package:food/App/features/home/homepage/main_screen/weather/widgets/search_widget.dart';
+import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 import 'package:food/data/remote_data_sources/weather_remote_data_sources.dart';
-import 'package:food/models/weather_model.dart';
+
 import 'package:food/repositories/weather_repository.dart';
 
-class WeatherPage extends StatelessWidget {
+class WeatherPage extends StatefulWidget {
   const WeatherPage({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<WeatherPage> createState() => _WeatherPageState();
+}
+
+class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -31,99 +41,68 @@ class WeatherPage extends StatelessWidget {
         },
         builder: (context, state) {
           final weatherModel = state.model;
-          return Scaffold(
-            appBar: AppBar(
-              title: const Text('Temperatura'),
-              centerTitle: true,
+          return Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 208, 221),
+                ],
+                tileMode: TileMode.mirror,
+              ),
             ),
-            body: Center(
-              child: Builder(builder: (context) {
-                if (state.status == Status.loading) {
-                  return const Text('Loading');
-                }
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+            child: Scaffold(
+              appBar: AppBar(
+                flexibleSpace: const AppBarColorPage(),
+              ),
+              body: Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: <Color>[
+                      Color.fromARGB(255, 234, 237, 240),
+                      Color.fromARGB(255, 176, 208, 221),
+                    ],
+                    tileMode: TileMode.mirror,
+                  ),
+                ),
+                child: ListView(
                   children: [
-                    if (weatherModel != null)
-                      _DisplayWeatherWidget(
-                        weatherModel: weatherModel,
-                      ),
-                    _SearchWidget(),
+                    Column(
+                      children: [
+                        Center(
+                          child: Builder(
+                            builder: (context) {
+                              if (state.status == Status.loading) {
+                                return const Text('Loading');
+                              }
+                              return Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  if (weatherModel != null)
+                                    DisplayWeatherWidget(
+                                      weatherModel: weatherModel,
+                                    ),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
+                                  SearchWidget(),
+                                ],
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
-                );
-              }),
+                ),
+              ),
             ),
           );
         },
-      ),
-    );
-  }
-}
-
-class _DisplayWeatherWidget extends StatelessWidget {
-  const _DisplayWeatherWidget({
-    Key? key,
-    required this.weatherModel,
-  }) : super(key: key);
-
-  final WeatherModel weatherModel;
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<WeatherCubit, WeatherState>(
-      builder: (context, state) {
-        return Column(
-          children: [
-            Text(
-              weatherModel.temperature.toString(),
-              style: Theme.of(context).textTheme.headline1,
-            ),
-            const SizedBox(height: 20),
-            Text(
-              weatherModel.city,
-              style: Theme.of(context).textTheme.headline2,
-            ),
-            const SizedBox(height: 20),
-          ],
-        );
-      },
-    );
-  }
-}
-
-class _SearchWidget extends StatelessWidget {
-  _SearchWidget({
-    Key? key,
-  }) : super(key: key);
-
-  final _controller = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: TextField(
-              controller: _controller,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                label: Text('Miasto'),
-                hintText: 'Warszawa',
-              ),
-            ),
-          ),
-          const SizedBox(width: 20),
-          ElevatedButton(
-            onPressed: () {
-              context
-                  .read<WeatherCubit>()
-                  .getWeatherModel(city: _controller.text);
-            },
-            child: const Text('Pobierz'),
-          ),
-        ],
       ),
     );
   }
