@@ -2,58 +2,78 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:meta/meta.dart';
+import 'package:food/repositories/login_repository.dart';
 
 part 'root_state.dart';
 
 class RootCubit extends Cubit<RootState> {
-  RootCubit()
-      : super(
-          const RootState(
-            user: null,
-            isLoading: false,
-            errorMessage: '',
-          ),
-        );
+  RootCubit(this._loginRepository) : super(const RootState());
 
-  StreamSubscription? _streamSubscription;
+  final LoginRepository _loginRepository;
+
+  Future<void> register(
+      {required String email, required String password}) async {
+    try {
+      await _loginRepository.register(email: email, password: password);
+    } catch (error) {
+      emit(
+        RootState(user: null, errorMessage: error.toString()),
+      );
+    }
+  }
+
+  Future<void> signIn({required String email, required String password}) async {
+    try {
+      await _loginRepository.signIn(email: email, password: password);
+    } catch (error) {
+      emit(
+        RootState(user: null, errorMessage: error.toString()),
+      );
+    }
+  }
 
   Future<void> signOut() async {
-    FirebaseAuth.instance.signOut();
+    _loginRepository.signOut();
   }
 
-  Future<void> createaccount(
+  Future<void> creatingAccount(
       {required String email, required String password}) async {
-    FirebaseAuth.instance.createUserWithEmailAndPassword(
-      email: email,
-      password: password,
+    emit(
+      const RootState(
+        user: null,
+        isLoading: true,
+        isCreatingAccount: true,
+      ),
     );
   }
 
-  Future<void> loginaccount(
-      {required String email, required String password}) async {
-    FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: email,
-      password: password,
+  Future<void> notCreatingAccount() async {
+    emit(
+      const RootState(
+        user: null,
+        isLoading: true,
+        isCreatingAccount: false,
+      ),
     );
   }
+
+  StreamSubscription? _streamSubscription;
 
   Future<void> start() async {
     emit(
       const RootState(
         user: null,
         isLoading: true,
+        isCreatingAccount: false,
         errorMessage: '',
       ),
     );
-    _streamSubscription = FirebaseAuth.instance.authStateChanges().listen(
+
+    _streamSubscription = _loginRepository.authState().listen(
       (user) {
         emit(
           RootState(
             user: user,
-            isLoading: false,
-            errorMessage: '',
           ),
         );
       },
@@ -61,8 +81,6 @@ class RootCubit extends Cubit<RootState> {
         (error) {
           emit(
             RootState(
-              user: null,
-              isLoading: false,
               errorMessage: error.toString(),
             ),
           );

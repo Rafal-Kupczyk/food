@@ -5,7 +5,9 @@ import 'package:food/App/cubit/root_cubit.dart';
 import 'package:food/App/features/home/Login/login_page.dart';
 
 import 'package:food/App/features/home/bottomnavigationbar_page.dart';
+import 'package:food/App/welcome_page.dart';
 import 'package:food/config.dart';
+import 'package:food/repositories/login_repository.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,43 +25,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/firstpage.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: SafeArea(
-          child: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => const RootPage(),
-                    ),
-                  );
-                },
-                child: const Text('Zaczynamy'),
-              )
-            ]),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class RootPage extends StatelessWidget {
   const RootPage({
     Key? key,
@@ -68,7 +33,7 @@ class RootPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => RootCubit()..start(),
+      create: (context) => RootCubit(LoginRepository())..start(),
       child: BlocBuilder<RootCubit, RootState>(
         builder: (context, state) {
           final user = state.user;
