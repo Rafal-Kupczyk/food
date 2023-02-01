@@ -1,8 +1,9 @@
 import 'package:food/data/remote_data_sources/weather_remote_data_sources.dart';
 import 'package:food/models/weather_model.dart';
-
+import 'package:injectable/injectable.dart';
+@injectable  
 class WeatherRepository {
-  WeatherRepository(this._weatherRemoteDataSources);
+  WeatherRepository(this._weatherRemoteDataSources,);
 
   final WeatherRemoteDataSources _weatherRemoteDataSources;
 

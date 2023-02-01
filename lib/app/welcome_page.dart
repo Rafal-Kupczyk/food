@@ -1,7 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:food/App/app.dart';
+import 'package:food/app/app.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({

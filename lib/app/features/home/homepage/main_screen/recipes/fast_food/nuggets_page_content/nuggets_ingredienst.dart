@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,95 +26,38 @@ class NuggetsIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        '300 g kurczaka',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      const Center(
-                        child: Icon(
-                          Icons.brightness_1_rounded,
-                          size: 20,
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Text(
-                        '1 jajko',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      const Center(
-                        child: Icon(
-                          Icons.brightness_1_rounded,
-                          size: 20,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        '1/2 szklanki mąki pszennej',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      const Center(
-                        child: Icon(
-                          Icons.brightness_1_rounded,
-                          size: 20,
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Text(
-                        '1 szklanka mleka',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      const Center(
-                        child: Icon(
-                          Icons.brightness_1_rounded,
-                          size: 20,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Text('4 łyżki oliwy z oliwek',
+                      Expanded(
+                        child: Text(
+                          '300 g kurczaka',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      const Center(
+                        child: Icon(
+                          Icons.brightness_1_rounded,
+                          size: 20,
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                        child: Text(
+                          '1 jajko',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -133,10 +74,84 @@ class NuggetsIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        'Bułka tarta',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          '1/2 szklanki mąki pszennej',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      const Center(
+                        child: Icon(
+                          Icons.brightness_1_rounded,
+                          size: 20,
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                        child: Text(
+                          '1 szklanka mleka',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      const Center(
+                        child: Icon(
+                          Icons.brightness_1_rounded,
+                          size: 20,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Text('4 łyżki oliwy z oliwek',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      const Center(
+                        child: Icon(
+                          Icons.brightness_1_rounded,
+                          size: 20,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Text(
+                          'Bułka tarta',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
                         ),
                       ),
                     ],

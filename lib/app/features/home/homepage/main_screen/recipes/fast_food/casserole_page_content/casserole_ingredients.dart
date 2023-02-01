@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -27,10 +26,13 @@ class CasseroleIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        '1 dowolna, długa bagietka',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          '1 dowolna, długa bagietka',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
                         ),
                       ),
                     ],
@@ -47,11 +49,13 @@ class CasseroleIngredients extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      Text('300 g pieczarek',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text('300 g pieczarek',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
@@ -68,11 +72,13 @@ class CasseroleIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text('300 g sera mozzarella',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text('300 g sera mozzarella',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
@@ -91,8 +97,8 @@ class CasseroleIngredients extends StatelessWidget {
                         child: Text(
                           'Dotatki: sos/ketchup/prażona cebula',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),

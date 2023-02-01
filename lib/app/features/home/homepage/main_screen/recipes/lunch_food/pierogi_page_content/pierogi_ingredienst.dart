@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,10 +26,13 @@ class PierogiIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        '500 g mąki pszennej ',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          '500 g mąki pszennej ',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
                         ),
                       ),
                     ],
@@ -51,8 +52,8 @@ class PierogiIngredients extends StatelessWidget {
                       Expanded(
                         child: Text('Szklanka gorącej wody - 250 ml',
                             style: GoogleFonts.prompt(
-                              textStyle:
-                                  const TextStyle(letterSpacing: .1, fontSize: 16),
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -71,11 +72,13 @@ class PierogiIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text('50 ml oleju',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text('50 ml oleju',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
@@ -93,8 +96,8 @@ class PierogiIngredients extends StatelessWidget {
                       Expanded(
                         child: Text('Sól',
                             style: GoogleFonts.prompt(
-                              textStyle:
-                                  const TextStyle(letterSpacing: .1, fontSize: 16),
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
@@ -117,8 +120,8 @@ class PierogiIngredients extends StatelessWidget {
                         child: Text(
                           '300 g twarogu półtłustego',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -138,10 +141,13 @@ class PierogiIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        'Duża cebula',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          'Duża cebula',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
                         ),
                       ),
                     ],
@@ -164,8 +170,8 @@ class PierogiIngredients extends StatelessWidget {
                         child: Text(
                           '500 g ugotowanych ziemniaków',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),
@@ -189,8 +195,8 @@ class PierogiIngredients extends StatelessWidget {
                         child: Text(
                           '2 łyżki masła klarowanego',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
                           ),
                         ),
                       ),

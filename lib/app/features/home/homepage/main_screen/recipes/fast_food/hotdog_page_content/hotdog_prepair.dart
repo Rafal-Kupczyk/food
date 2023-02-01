@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -169,8 +168,7 @@ class HotDogPrepair extends StatelessWidget {
                     radius: 2,
                     colors: const [
                       Color.fromARGB(255, 0, 0, 0),
-                      Color.fromARGB(255, 255, 17, 0),
-                      Color.fromARGB(255, 255, 4, 209),
+                      Color.fromARGB(255, 137, 0, 0),
                     ],
                   ),
                 )

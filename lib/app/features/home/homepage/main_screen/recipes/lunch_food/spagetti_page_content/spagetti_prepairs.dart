@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -30,8 +29,8 @@ class SpagettiPrepair extends StatelessWidget {
                         child: Text(
                           'Tak więc zaczynamy nasze gotowanie. Na patelnie dajemy ok. 3 łyżki oleju i mięso mielone. Przyprawiamy je papryką słodka i ostrą (nie za dużo) pieprz oraz rosołek Winiary. Wszystko podlewamy odrobiną wody.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       ),
@@ -53,8 +52,8 @@ class SpagettiPrepair extends StatelessWidget {
                         child: Text(
                           'Następnie blenderujemy bądź siekamy na bardzo drobno cebulę i czosnek i dodajemy do mięsa. Teraz czas na pomidorki. Ja obrałem je ze skórki i pokroiłem. Następnie dajemy do osobnego garnka i podlewamy ok 1/2 szklanki wody. Pomidory albo zgniatamy albo blenderujemy i solimy. Gdy się zagotują zbieramy tzw. szumowinę, a następnie dodajemy do mięsa. Moje pomidorki były bardzo słodkie i łagodne więc do mięsa dodałam jeszcze trochę ketchupu pikantnego.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -76,8 +75,8 @@ class SpagettiPrepair extends StatelessWidget {
                         child: Text(
                           'W międzyczasie gotujemy osoloną wodę z 2 łyżkami oliwy na makaron. Po zagotowaniu się wody dodajemy makaron i gotujemy ok 20 minut. Następnie makaron przelewamy zimną wodą czyli hartujemy. Makaron wykładamy na talerz i dajemy mięso z sosem.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -98,8 +97,7 @@ class SpagettiPrepair extends StatelessWidget {
                     radius: 2,
                     colors: const [
                       Color.fromARGB(255, 0, 0, 0),
-                      Color.fromARGB(255, 255, 17, 0),
-                      Color.fromARGB(255, 255, 4, 209),
+                      Color.fromARGB(255, 137, 0, 0),
                     ],
                   ),
                 )

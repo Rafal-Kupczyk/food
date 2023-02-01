@@ -77,7 +77,7 @@ class MainContainer extends StatelessWidget {
                         Text(
                           weatherModel.city,
                           style: const TextStyle(
-                            fontSize: 17,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
@@ -87,7 +87,7 @@ class MainContainer extends StatelessWidget {
                     Text(
                       weatherModel.date,
                       style: const TextStyle(
-                        fontSize: 15,
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),

@@ -2,9 +2,11 @@ import 'package:bloc/bloc.dart';
 import 'package:food/App/core/enums.dart';
 import 'package:food/models/weather_model.dart';
 import 'package:food/repositories/weather_repository.dart';
+import 'package:injectable/injectable.dart';
 
 part 'weather_state.dart';
 
+@injectable
 class WeatherCubit extends Cubit<WeatherState> {
   WeatherCubit(this._weatherRepository) : super(const WeatherState());
 

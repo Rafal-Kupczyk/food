@@ -225,8 +225,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     icon: const Icon(
-                      Icons.auto_stories,
-                      color: Color.fromARGB(255, 248, 248, 1),
+                      Icons.ac_unit_outlined,
+                      color: Color.fromARGB(255, 24, 3, 255),
                     ),
                     onHover: (hovered) => setState(() {
                       isPressed = hovered;

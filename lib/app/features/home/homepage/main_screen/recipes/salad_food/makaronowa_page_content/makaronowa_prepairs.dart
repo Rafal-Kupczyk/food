@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -30,8 +29,8 @@ class MakaronowaPrepair extends StatelessWidget {
                         child: Text(
                           'Sałatka makaronowa składa się przede wszystkim z drobnego makaronu. Można użyć zarówno makaronu typu kokardki, muszelki, wstążki czy nawet całkiem takiego drobniutkiego jak gwiazdki. Fajnie się sprawdza także makaron ryżowy.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       ),
@@ -53,8 +52,8 @@ class MakaronowaPrepair extends StatelessWidget {
                         child: Text(
                           'Szynkę drobiową (ja kupowałam w kawałku, około 150 g) kroimy w kosteczkę.Kroimy także w kostkę paprykę czerwoną, ogórka świeżego (jeśli wolicie to można zastąpić ogórkami konserwowymi).',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -76,8 +75,8 @@ class MakaronowaPrepair extends StatelessWidget {
                         child: Text(
                           'Do miski dodajemy odcedzony, ugotowany makaron. Wsypujemy także odcedzoną z zalewy kukurydzę konserwową.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -99,8 +98,8 @@ class MakaronowaPrepair extends StatelessWidget {
                         child: Text(
                           'Do miski dodajemy szynkę, ogórka, paprykę, a także przekrojone w ćwiartki pomidorki koktajlowe (około 15 szt).',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -122,8 +121,8 @@ class MakaronowaPrepair extends StatelessWidget {
                         child: Text(
                           'Dodajemy także majonez (3 łyżki), posiekany koperek (1 łyżeczka), a także większą szczyptę soli i pieprzu.Ja dodaję także opcjonalnie przeciśnięte przez praskę 2 ząbki czosnku lub odrobinę ketchupu.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -145,8 +144,8 @@ class MakaronowaPrepair extends StatelessWidget {
                         child: Text(
                           'Całość mieszamy za pomocą łyżki i doprawiamy ewentualnie do smaku solą i pieprzem.Sałatka makaronowa jest już od razu gotowa do spożycia.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -167,8 +166,7 @@ class MakaronowaPrepair extends StatelessWidget {
                     radius: 2,
                     colors: const [
                       Color.fromARGB(255, 0, 0, 0),
-                      Color.fromARGB(255, 255, 17, 0),
-                      Color.fromARGB(255, 255, 4, 209),
+                      Color.fromARGB(255, 137, 0, 0),
                     ],
                   ),
                 )

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -30,8 +29,8 @@ class FishPrepair extends StatelessWidget {
                         child: Text(
                           'Piekarnik nagrzewamy do temp. 210 stopni.Filety z ryby myjemy, osuszamy za pomocą papierowego ręcznika i dzielimy na 4-5 porcji. Usuwamy ewentualne ości.Ja kupiłem łososia ze skórą i jej nie wycinałem nożem. Jeśli chcesz to ją usuń.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       ),
@@ -53,8 +52,8 @@ class FishPrepair extends StatelessWidget {
                         child: Text(
                           'W miseczce mieszamy oliwę z oliwek (2-3 łyżki, opcjonalnie zastąpić masłem klarowanym) z przyprawami – sól, pieprz, bazylia (szczypta), przyprawę do ryb (1/3 łyżeczki), suszone pomidory (1/3 łyżeczki, lub paprykę słodką). Jeśli macie to opcjonalnie można dodać łyżeczkę posiekanej świeżej kolendry czy rozmarynu.Przygotowaną mieszanką smarujemy wierzch kawałków ryby.',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -76,8 +75,8 @@ class FishPrepair extends StatelessWidget {
                         child: Text(
                           'Następnie układamy rybę i posypujemy sezamem czy czarnuszką.Wkładamy do nagrzanego piekarnika i pieczemy przez 15-18 minut (góra-dół, np. z termoobiegiem).',
                           style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .2, fontSize: 17),
+                            textStyle: const TextStyle(
+                                letterSpacing: .2, fontSize: 17),
                           ),
                         ),
                       )
@@ -98,8 +97,7 @@ class FishPrepair extends StatelessWidget {
                     radius: 2,
                     colors: const [
                       Color.fromARGB(255, 0, 0, 0),
-                      Color.fromARGB(255, 255, 17, 0),
-                      Color.fromARGB(255, 255, 4, 209),
+                      Color.fromARGB(255, 137, 0, 0),
                     ],
                   ),
                 )

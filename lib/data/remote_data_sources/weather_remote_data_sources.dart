@@ -1,6 +1,10 @@
 import 'package:dio/dio.dart';
-
+import 'package:injectable/injectable.dart';
+@injectable  
 class WeatherRemoteDataSources {
+
+
+
   Future<Map<String, dynamic>?> getWeatherData({
     required String city,
   }) async {
@@ -13,4 +17,5 @@ class WeatherRemoteDataSources {
           error.response?.data['error']['message'] ?? 'Nieznany błąd');
     }
   }
+
 }

@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,10 +26,13 @@ class PizzaIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        '25 g świeżych drożdży (lub 7 g instant)',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          '25 g świeżych drożdży (lub 7 g instant)',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
                         ),
                       ),
                     ],
@@ -48,11 +49,13 @@ class PizzaIngredients extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      Text('150 ml ciepłej wody',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text('150 ml ciepłej wody',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
@@ -69,11 +72,13 @@ class PizzaIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text('1/2 łyżeczki cukru',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text('1/2 łyżeczki cukru',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
@@ -88,11 +93,13 @@ class PizzaIngredients extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      Text('250 g mąki pszennej',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text('250 g mąki pszennej',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
@@ -109,11 +116,13 @@ class PizzaIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text('1 łyżeczka soli',
-                          style: GoogleFonts.prompt(
-                            textStyle:
-                                const TextStyle(letterSpacing: .1, fontSize: 16),
-                          )),
+                      Expanded(
+                        child: Text('1 łyżeczka soli',
+                            style: GoogleFonts.prompt(
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
+                            )),
+                      ),
                     ],
                   ),
                 ),
@@ -130,10 +139,13 @@ class PizzaIngredients extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        '1 łyżka oliwy',
-                        style: GoogleFonts.prompt(
-                          textStyle: const TextStyle(letterSpacing: .1, fontSize: 16),
+                      Expanded(
+                        child: Text(
+                          '1 łyżka oliwy',
+                          style: GoogleFonts.prompt(
+                            textStyle: const TextStyle(
+                                letterSpacing: .1, fontSize: 16),
+                          ),
                         ),
                       ),
                     ],
@@ -156,8 +168,8 @@ class PizzaIngredients extends StatelessWidget {
                         child: Text(
                             'Dotatki: ser, czerwona cebula, szynka itp + sos czosnkowy/ostry',
                             style: GoogleFonts.prompt(
-                              textStyle:
-                                  const TextStyle(letterSpacing: .1, fontSize: 16),
+                              textStyle: const TextStyle(
+                                  letterSpacing: .1, fontSize: 16),
                             )),
                       ),
                     ],
