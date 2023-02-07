@@ -1,10 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/salad_food/jarzynowa_page_content/jarzynowa_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/salad_food/jarzynowa_page_content/jarzynowa_prepairs.dart';
-
-
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
@@ -56,8 +52,12 @@ class _JarzynowaPageState extends State<JarzynowaPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(

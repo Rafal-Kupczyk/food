@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_ingredienst.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/kotlet_page_content/kotlet_prepairs.dart';
-
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
@@ -53,16 +51,16 @@ class _KotletPageState extends State<KotletPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(
-              children: [
-                KotletPrepair(),
-                KotletIngredients(),
-                KotletOthers()
-              ],
+              children: [KotletPrepair(), KotletIngredients(), KotletOthers()],
             ),
           ),
         ),

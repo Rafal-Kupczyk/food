@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food/app/cubit/root_cubit.dart';
+import 'package:food/App/cubit/root_cubit.dart';
 
-import 'package:food/app/features/home/Login/login_page.dart';
+import 'package:food/App/features/home/Login/login_page.dart';
 
-import 'package:food/app/features/home/bottomnavigationbar_page.dart';
-import 'package:food/app/welcome_page.dart';
+import 'package:food/App/features/home/bottomnavigationbar_page.dart';
+import 'package:food/App/welcome_page.dart';
 import 'package:food/config.dart';
 import 'package:food/repositories/login_repository.dart';
 

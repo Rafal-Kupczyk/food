@@ -51,8 +51,12 @@ class _SchabowyPageState extends State<SchabowyPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(

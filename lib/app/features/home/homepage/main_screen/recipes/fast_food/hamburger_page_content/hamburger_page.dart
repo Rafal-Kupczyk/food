@@ -3,7 +3,6 @@ import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/ha
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/hamburger_page_content/hamburger_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/hamburger_page_content/hamburger_prepair.dart';
 
-
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
 class HamburgerPage extends StatefulWidget {
@@ -52,8 +51,12 @@ class _HamburgerPageState extends State<HamburgerPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(

@@ -168,7 +168,7 @@ class HotDogPrepair extends StatelessWidget {
                     radius: 2,
                     colors: const [
                       Color.fromARGB(255, 0, 0, 0),
-                      Color.fromARGB(255, 137, 0, 0),
+                      Color.fromARGB(255, 51, 49, 49),
                     ],
                   ),
                 )

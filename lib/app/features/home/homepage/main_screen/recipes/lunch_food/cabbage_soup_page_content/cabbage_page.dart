@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/cabbage_soup_page_content/cabbage_ingredienst.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/cabbage_soup_page_content/cabbage_others.dart';
@@ -53,8 +51,12 @@ class _CabbagePageState extends State<CabbagePage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(

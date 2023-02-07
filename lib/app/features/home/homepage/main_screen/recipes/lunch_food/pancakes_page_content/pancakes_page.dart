@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pancakes_page_content/pancakes_ingredienst.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pancakes_page_content/pancakes_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/lunch_food/pancakes_page_content/pancakes_prepairs.dart';
-
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
@@ -53,8 +51,12 @@ class _PancakesPageState extends State<PancakesPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(

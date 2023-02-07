@@ -3,7 +3,6 @@ import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/nu
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/nuggets_page_content/nuggets_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/nuggets_page_content/nuggets_prepair.dart';
 
-
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
 class NuggetsPage extends StatefulWidget {
@@ -52,8 +51,12 @@ class _NuggetsPageState extends State<NuggetsPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(

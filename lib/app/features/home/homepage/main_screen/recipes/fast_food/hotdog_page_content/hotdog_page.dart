@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/hotdog_page_content/hotdog_ingredients.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/hotdog_page_content/hotdog_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/hotdog_page_content/hotdog_prepair.dart';
-
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
@@ -53,16 +51,16 @@ class _HotDogPageState extends State<HotDogPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
-            child:  const TabBarView(
-              children: [
-                HotDogPrepair(),
-                HotDogIngredients(),
-                HotDogOthers()
-              ],
+            child: const TabBarView(
+              children: [HotDogPrepair(), HotDogIngredients(), HotDogOthers()],
             ),
           ),
         ),
@@ -70,5 +68,3 @@ class _HotDogPageState extends State<HotDogPage> {
     );
   }
 }
-
-

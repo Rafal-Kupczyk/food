@@ -1,10 +1,7 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/casserole_page_content/casserole_ingredients.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/casserole_page_content/casserole_others.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/casserole_page_content/casserole_prepair.dart';
-
 
 import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
 
@@ -54,8 +51,12 @@ class _CasserolePageState extends State<CasserolePage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(

@@ -6,7 +6,7 @@ import 'package:food/App/core/enums.dart';
 import 'package:food/App/features/home/homepage/main_screen/weather/cubit/weather_cubit.dart';
 import 'package:food/App/features/home/homepage/main_screen/weather/widgets/display_weather.dart';
 import 'package:food/App/features/home/homepage/main_screen/weather/widgets/search_widget.dart';
-import 'package:food/app/features/home/random/widgets/app_bar_color.dart';
+import 'package:food/App/features/home/random/widgets/app_bar_color.dart';
 import 'package:food/data/remote_data_sources/weather_remote_data_sources.dart';
 
 import 'package:food/repositories/weather_repository.dart';

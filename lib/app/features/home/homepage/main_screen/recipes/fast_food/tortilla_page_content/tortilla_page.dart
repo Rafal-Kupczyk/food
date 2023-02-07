@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/tortilla_page_content/tortilla_ingredients.dart';
 import 'package:food/App/features/home/homepage/main_screen/recipes/fast_food/tortilla_page_content/tortilla_others.dart';
@@ -52,8 +51,12 @@ class _TortillaPageState extends State<TortillaPage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFBDFF06), Colors.orange],
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 234, 237, 240),
+                  Color.fromARGB(255, 176, 255, 183),
+                ],
+                tileMode: TileMode.mirror,
               ),
             ),
             child: const TabBarView(
