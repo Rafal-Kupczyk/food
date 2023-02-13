@@ -113,17 +113,20 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
                         child: CategoryWidget(shopingModel.title),
                       ),
                     ],
-                    TextField(
-                      decoration: const InputDecoration(
-                        hintText: 'Wpisz produkt ',
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color.fromARGB(255, 3, 255, 66),
-                            width: 1.0,
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: TextField(
+                        decoration: const InputDecoration(
+                          hintText: 'Wpisz produkt ',
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 3, 255, 66),
+                              width: 1.0,
+                            ),
                           ),
                         ),
+                        controller: controller,
                       ),
-                      controller: controller,
                     ),
                     const SizedBox(height: 30),
                     const Center(
